@@ -126,7 +126,7 @@
 
                                     </select>
 
-                                    <label>Kesalahan</label>
+                                    <label>KESALAHAN</label>
                                     <select name="kesalahan" class="form-control mb-3">
                                         <option @if ($notis->kesalahan == 'Tiada') selected @endif value='Tiada'>Tiada</option>
                                         <option @if ($notis->kesalahan == 'Tidak Diselenggara') selected @endif value='Tidak Diselenggara'>Tidak Diselenggara
