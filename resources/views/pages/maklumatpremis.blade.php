@@ -98,14 +98,18 @@
                     </div>
                     <div class="col-xl-12">
                         <div class="form-group">
-                            <label class="form-control-label">Jenis Perniagaan</label>
+                           <label class="form-control-label">Jenis Perniagaan</label>
                             <select class="form-control mb-3" id="jenis_perniagaan" name="jenis_perniagaan">
                                 {{-- <option selected value="{{$premis->jenis_perniagaan}}">{{$premis->jenis_perniagaan}}</option> --}}
-                                <option @if ($premis->jenis_perniagaan == 'Konsultan Pembinaan') selected @endif value="Konsultan Pembinaan">Konsultan Pembinaan</option>
-                                <option @if ($premis->jenis_perniagaan == 'Pembungkusan & Percetakan') selected @endif value="Pembungkusan & Percetakan">Pembungkusan & Percetakan</option>
-                                <option @if ($premis->jenis_perniagaan == 'Elektrik & Elektronik') selected @endif value="Elektrik & Elektronik">Elektrik & Elektronik</option>
-                                <option @if ($premis->jenis_perniagaan == 'Produk Kimia') selected @endif value="Produk Kimia">Produk Kimia</option>
-                                <option @if ($premis->jenis_perniagaan == 'Hotel & Penginapan') selected @endif value="Hotel & Penginapan">Hotel & Penginapan</option>
+                                <option @if ($premis->jenis_perniagaan == '1') selected @endif value="1">Kediaman</option>
+                                <option @if ($premis->jenis_perniagaan == '2') selected @endif value="2">Institusi Pendudukan Pelajaran</option>
+                                <option @if ($premis->jenis_perniagaan == '3') selected @endif value="3">Hospital dan Rumah Rawatan</option>
+                                <option @if ($premis->jenis_perniagaan == '4') selected @endif value="4">Kediaman Lain</option>
+                                <option @if ($premis->jenis_perniagaan == '5') selected @endif value="5">Pejabat</option>
+                                <option @if ($premis->jenis_perniagaan == '6') selected @endif value="6">Kilang</option>
+                                <option @if ($premis->jenis_perniagaan == '7') selected @endif value="7">Tempat Perhimpunan</option>
+                                <option @if ($premis->jenis_perniagaan == '8') selected @endif value="8">Storan dan Am</option>
+
                             </select>
                         </div>
                     </div>

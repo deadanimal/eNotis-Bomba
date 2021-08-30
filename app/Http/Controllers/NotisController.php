@@ -100,8 +100,6 @@ class NotisController extends Controller
 
         //To Upload image into DB
         
-
-
         $notis->tarikh_pemeriksaan=$request->tarikh_pemeriksaan;
         $notis->id_premis=$request->id_premis;
         $notis->no_siri=$request->no_siri;
@@ -128,7 +126,7 @@ class NotisController extends Controller
     public function papar_notis($id)
     {
         $notis= Notis::find($id);
-        $premis=Premis::find($id);
+        $premis=Premis::where('id', $notis->id_premis)->get();
         return view('pages.statusnotisborang',[
             'notis'=>$notis, 'premis'=>$premis
         ]);

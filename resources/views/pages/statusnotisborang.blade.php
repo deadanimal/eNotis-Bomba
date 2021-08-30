@@ -98,8 +98,11 @@
                                     <label>TARIKH PEMERIKSAAN</label>
                                     <input class="multisteps-form__input form-control mb-3" type="date" value="{{$notis->tarikh_pemeriksaan}}" name="tarikh_pemeriksaan" disabled/>
 
-                                    {{-- <label>Nama Premis</label> 
-                                    <select class="form-control" name="id_premis" disabled>
+                                    <label>Nama Premis</label>
+                                    @foreach ($premis as $premis)
+                                    <input type="text" name="id_premis" value="{{$premis->nama_premis}}" class="form-control" disabled>
+                                    @endforeach
+                                    {{-- <select class="form-control" name="id_premis" disabled>
                                         @foreach($premis as $premis)
                                         <option @if ($notis->id_premis == {{$notis->id_premis}}) selected 
                                             @endif value="{{$notis->id_premis}}">{{$premis->nama_premis}}
@@ -112,7 +115,7 @@
                                     
 
                                     <label>JENIS PPK</label>
-                                    <select class="multisteps-form__input form-control mb-3" name="jenis_ppk">
+                                    <select class="multisteps-form__input form-control mb-3" name="jenis_ppk" disabled>
                                         <option @if ($notis->jenis_ppk == 'PAM JOKEY') selected @endif value="PAM JOKEY">PAM JOKEY</option>
                                         <option @if ($notis->jenis_ppk == 'PAM DUTY') selected @endif value="PAM DUTY">PAM DUTY</option>
                                         <option @if ($notis->jenis_ppk == 'PAM STANDBY') selected @endif value="PAM STANDBY">PAM STANDBY</option>

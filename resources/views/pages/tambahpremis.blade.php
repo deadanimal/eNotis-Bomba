@@ -96,11 +96,19 @@
                     <label class="form-control-label">Jenis Perniagaan</label>
                     <select class="form-control mb-3" name="jenis_perniagaan">
                         <option hidden selected>Sila Pilih</option>
-                        <option value="Konsultan Pembinaan">Konsultan Pembinaan</option>
+                        {{-- <option value="Konsultan Pembinaan">Konsultan Pembinaan</option>
                         <option value="Pembungkusan & Percetakan">Pembungkusan & Percetakan</option>
                         <option value="Elektrik & Elektronik">Elektrik & Elektronik</option>
                         <option value="roduk Kimia">Produk Kimia</option>
-                        <option value="Hotel & Penginapan">Hotel & Penginapan</option>
+                        <option value="Hotel & Penginapan">Hotel & Penginapan</option> --}}
+                        <option value="1">Kediaman</option>
+                        <option value="2">Institusi Pendudukan Pelajaran</option>
+                        <option value="3">Hospital dan Rumah Rawatan</option>
+                        <option value="4">Kediaman Lain</option>
+                        <option value="5">Pejabat</option>
+                        <option value="6">Kilang</option>
+                        <option value="7">Tempat Perhimpunan</option>
+                        <option value="8">Storan dan Am</option>
                     </select>
                 </div>
             </div>

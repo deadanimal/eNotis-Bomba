@@ -211,7 +211,7 @@
                                                     <option value="Rosak">Rosak</option>
                                                     <!-- <option value="5">5</option> -->
                                                 </select>
-                                                <label>ARAS</label>
+                                                <label>ARAS/TINGKAT</label>
                                                 <select class="multisteps-form__input form-control mb-3" id="lokasi" name="aras" >
                                                     <option hidden selected>Sila Pilih</option>
                                                     <option value="Aras 1">Aras 1</option>
