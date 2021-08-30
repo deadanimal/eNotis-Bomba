@@ -37,7 +37,7 @@
 
     <p> SILA AMBIL PERHATIAN bahawa Ketua Pengarah Perkhidmatan Bomba setelah berpuas hati tentang adanya di
         {{ $premis->nama_premis }}, suatu bahaya kebakaran iaitu {{ $notis->jenis_ppk }} yang {{ $notis->kesalahan }} di
-        {{ $notis->lokasi }}. Dengan ini, menurut seksyen 8(1) Akta Perkhidmatan Bomba 1998, menghendaki tuan, dalam
+        {{$notis->lokasi}} {{ $notis->aras }} . Dengan ini, menurut seksyen 8(1) Akta Perkhidmatan Bomba 1998, menghendaki tuan, dalam
         masa {{ $notis->tempoh }} dari penyampaian notis ini, (1)menghapuskan bahaya kebakaran itu, dan bagi tujuan itu
         hendaklah {{ $notis->pembetulan }} dan (2) melakukan apa jua yang perlu bagi mencegah berulangnya bahaya
         kebakaran itu. </p>
@@ -52,6 +52,6 @@
     <p>Bertarikh pada {{ $notis->tarikh_pemeriksaan }}. </p>
 
     <br><br>
-    <b style="text-align:right">KETUA PENGARAH PERKHIDMATAN BOMBA </b>
+    <b>KETUA PENGARAH PERKHIDMATAN BOMBA </b>
 
 </body>

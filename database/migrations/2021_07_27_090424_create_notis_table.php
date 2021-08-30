@@ -28,6 +28,7 @@ class CreateNotisTable extends Migration
             $table->String('jenis_ppk')->nullable();
             $table->String('kesalahan')->nullable();
             $table->String('lokasi')->nullable();
+            $table->String('aras')->nullable();
             $table->String('pembetulan')->nullable();
             $table->String('seksyen')->nullable();
             $table->String('tempoh')->nullable();

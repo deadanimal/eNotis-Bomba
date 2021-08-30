@@ -144,7 +144,7 @@
                                                 <input class="multisteps-form__input form-control mb-3" type="date" placeholder="2021-01-01" name="tarikh_pemeriksaan" />
                                                 <label>NAMA PREMIS</label>
                                                 {{-- <input class="multisteps-form__input form-control mb-3" name="nama_premis" type="text" placeholder="Pipeline Network Sdn Bhd" /> --}}
-                                                <select class="form-control" name="id_premis">
+                                                <select class="multisteps-form__input form-control mb-3" name="id_premis">
                                                     <option hidden>SILA PILIH</option>
                                                    @foreach($premis as  $premis)
                                                       <option value="{{$premis->id}}">{{$premis->nama_premis}}</option>
@@ -186,11 +186,10 @@
                                                 <label>JENIS PPK</label>
                                                 <select class="multisteps-form__input form-control mb-3" name="jenis_ppk">
                                                     <option hidden selected>Sila Pilih</option>
-                                                    <optgroup label="PAM">
                                                         <option value="Pam Jokey">Pam Jokey</option>
                                                         <option value="Pam Duty">Pam Duty</option>
                                                         <option value="Pam Standby">Pam Standby</option>
-                                                    </optgroup>
+                                            
                                                     <!-- <option value="1">PAM</option> -->
                                                     <option value="Pintu Api">Pintu Api</option>
                                                     <option value="Alat Pemadam Api">Alat Pemadam Api</option>
@@ -212,17 +211,20 @@
                                                     <option value="Rosak">Rosak</option>
                                                     <!-- <option value="5">5</option> -->
                                                 </select>
-                                                <label>LOKASI</label>
-                                                <select class="multisteps-form__input form-control mb-3" id="lokasi" name="lokasi" >
+                                                <label>ARAS</label>
+                                                <select class="multisteps-form__input form-control mb-3" id="lokasi" name="aras" >
                                                     <option hidden selected>Sila Pilih</option>
-                                                    <option value="TINGKAT 1">Tingkat 1</option>
-                                                    <option value="Tingkat 2">Tingkat 2</option>
-                                                    <option value="Tingkat 3">Tingkat 3</option>
-                                                    <option value="Tingkat 4">Tingkat 4</option>
-                                                    <option value="Tingkat 5">Tingkat 5</option>
+                                                    <option value="Aras 1">Aras 1</option>
+                                                    <option value="Aras 2">Aras 2</option>
+                                                    <option value="Aras 3">Aras 3</option>
+                                                    <option value="Aras 4">Aras 4</option>
+                                                    <option value="Aras 5">Aras 5</option>
                                                     <option value="Lain">Lain-Lain</option>
                                                 </select>
-                                                <input type="text" name="lokasi" id="lokasi_lain"  class="form-control mb-3" style="display: none">
+                                                <input type="text" name="aras" id="lokasi_lain"  class="multisteps-form__input form-control mb-3" style="display: none">
+
+                                                <label>LOKASI</label>
+                                                <input type="text" name="lokasi" class="multisteps-form__input form-control mb-3">
 
 
                                                 <label>PEMBETULAN</label>
@@ -252,6 +254,8 @@
                                                     <option value="90 Hari">90 Hari</option>
                                                     <option value="120 Hari">120 Hari</option>
                                                     <option value="150 Hari">150 Hari</option>
+                                                    <option value="180 Hari">180 Hari</option>
+                                                    <option value="360 Hari">360 Hari</option>
                                                 </select>
                                             </div>
                                         </div>

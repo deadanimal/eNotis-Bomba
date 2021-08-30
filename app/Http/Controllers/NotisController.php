@@ -42,7 +42,9 @@ class NotisController extends Controller
         'pembetulan' => 'nullable',
         'seksyen' => 'nullable',
         'tempoh' => 'nullable',
-        'img_notis'=>'nullable'
+        'img_notis'=>'nullable',
+        'aras'=>'nullable'
+
 
         ]);
 
@@ -57,6 +59,7 @@ class NotisController extends Controller
         $notis->no_siri=$combined;
         $notis->jenis_ppk=$request->jenis_ppk;
         $notis->kesalahan=$request->kesalahan;
+        $notis->aras=$request->aras;
         $notis->lokasi=$request->lokasi;
         $notis->pembetulan=$request->pembetulan;
         $notis->seksyen=$request->seksyen;
@@ -80,7 +83,7 @@ class NotisController extends Controller
     public function edit($id)
     {
         $notis= Notis::find($id);
-        $premis=Premis::all();
+        $premis=Premis::where('id', $notis->id_premis)->get();
         return view('pages.edit_notis',[
             'notis'=>$notis, 'premis'=>$premis]);
         
@@ -104,6 +107,7 @@ class NotisController extends Controller
         $notis->no_siri=$request->no_siri;
         $notis->jenis_ppk=$request->jenis_ppk;
         $notis->kesalahan=$request->kesalahan;
+        $notis->aras=$request->aras;
         $notis->lokasi=$request->lokasi;
         $notis->pembetulan=$request->pembetulan;
         $notis->seksyen=$request->seksyen;
