@@ -109,7 +109,7 @@
                                     <input type="text" name="no_siri" value="{{$notis->no_siri}}"  class="multisteps-form__input form-control mb-3">
                                     
 
-                                    <label>JENIS PPK</label>
+                                    <label>JENIS PPK  </label>
                                     <select class="multisteps-form__input form-control mb-3" name="jenis_ppk">
                                         <option @if ($notis->jenis_ppk == 'Pam Jokey') selected @endif value='Pam Jokey'>Pam Jokey</option>
                                         <option @if ($notis->jenis_ppk == 'Pam Duty') selected @endif value='Pam Duty'>Pam Duty</option>
