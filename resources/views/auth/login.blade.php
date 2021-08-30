@@ -68,14 +68,14 @@
             <!-- End Google Tag Manager (noscript) -->
     
             
-        <form method="POST"  action="{{ route('login.custom') }}">
+        <form method="POST"  action="{{route('login.custom')}}">
             @csrf
 
             <div class="imgbg text-center">
                 <div class="row">
                     <div class="col-xl-12 mt-4">
                         <div class="form-group">
-                             {{-- <x-label for="email" :value="__('Email')" class="form-control-label text-white"/> --}}
+                             <x-label for="email" :value="__('Email')" class="form-control-label text-white"/>
                             <input class="form-control w-100" type="email" placeholder="Email" id="email" required autofocus name="email" / >
                             @if ($errors->has('email'))
                             <span class="text-danger">{{ $errors->first('email') }}</span>

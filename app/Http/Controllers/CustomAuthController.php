@@ -19,13 +19,12 @@ class CustomAuthController extends Controller
 
     public function customLogin(Request $request)
     {
-        $request->validate([
-            'email' => 'required',
-            'password' => 'required',
-        ]);
+        //$request->validate([
+        //    'email' => 'required',
+        //    'password' => 'required',
+        //]);
    
         $credentials = $request->only('email', 'password');
-
         if (Auth::attempt($credentials)) {
             return redirect()->intended('/dashboard')
                         ->withSuccess('Signed in');
@@ -42,48 +41,48 @@ class CustomAuthController extends Controller
     }
       
 
+    public function customRegistration(Request $request)
+    {  
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required|email|unique:users',
+            'password' => 'required|min:6',
+        ]);
+        // line ni sus
+
+        $data = $request->all(); //implicit 
+        $check = $this->create($data); // eloquent 
+
+        // $check = $data::create([
+        //     'name' => $request->name,
+        //     'email' => $request->email,
+        //     'password' => Hash::make($request->password),
+        // ]);
+         
+        return redirect('/dashboard')->withSuccess('You have signed-in');
+    }
+
+
     // public function customRegistration(Request $request)
-    // {  
+    // {
     //     $request->validate([
-    //         'name' => 'required',
-    //         'email' => 'required|email|unique:users',
-    //         'password' => 'required|min:6',
+    //         'name' => 'required|string|max:255',
+    //         'email' => 'required|string|email|max:255|unique:users',
+    //         'password' => ['required|min:6']
     //     ]);
-    //     // line ni sus
 
-    //     // $data = $request->all(); //implicit 
-    //     // $check = $this->create($data); // eloquent 
-
-    //     $check = $data::create([
+    //     $user = User::create([
     //         'name' => $request->name,
     //         'email' => $request->email,
     //         'password' => Hash::make($request->password),
     //     ]);
-         
-    //     return redirect('/dashboard')->withSuccess('You have signed-in');
+
+    //     event(new Registered($user));
+
+    //     Auth::login($user);
+
+    //     return redirect(RouteServiceProvider::HOME);
     // }
-
-
-    public function customRegistration(Request $request)
-    {
-        $request->validate([
-            'name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users',
-            'password' => ['required|min:6']
-        ]);
-
-        $user = User::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => Hash::make($request->password),
-        ]);
-
-        event(new Registered($user));
-
-        Auth::login($user);
-
-        return redirect(RouteServiceProvider::HOME);
-    }
 
 
     public function create(array $data)
