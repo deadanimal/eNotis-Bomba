@@ -182,7 +182,7 @@
                                         <option @if ($notis->status =='Hantar') selected @endif value="Hantar">Hantar</option>
                                     </select>
 
-                                    <input type="file" name="img_notis" class="form-control"> 
+                                    <input type="file" name="img_notis" class="form-control" id="img_notis" > 
                                 </div>
 
                             </div>

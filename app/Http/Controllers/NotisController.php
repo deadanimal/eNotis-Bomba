@@ -42,6 +42,7 @@ class NotisController extends Controller
         'pembetulan' => 'nullable',
         'seksyen' => 'nullable',
         'tempoh' => 'nullable',
+        'img_notis'=>'nullable'
 
         ]);
 
@@ -95,7 +96,8 @@ class NotisController extends Controller
         //     ]);
 
         //To Upload image into DB
-        $notisa=$request->file('img_notis')->store('notis_img');
+        
+
 
         $notis->tarikh_pemeriksaan=$request->tarikh_pemeriksaan;
         $notis->id_premis=$request->id_premis;
@@ -107,7 +109,12 @@ class NotisController extends Controller
         $notis->seksyen=$request->seksyen;
         $notis->tempoh=$request->tempoh;
         $notis->status=$request->status;
-        $notis->img_notis=$notisa;
+        
+        // $notis->img_notis=$request->img_notis;
+         if ($request->hasFile('img_notis')){
+            $notisa=$request->file('img_notis')->store('notis_img');
+            $notis->img_notis=$notisa;
+         }
 
         $notis->save();
 
@@ -149,11 +156,12 @@ class NotisController extends Controller
      public function cetaknotis($id){
         // dd($id);
         $notis= Notis::find($id);
-        $premis=Premis::find($id);
+        $premis=Premis::where('id', $notis->id_premis)->get();
+
         $notis->status = "Hantar";
         $notis->save();
 
-        // dd($notis);
+        // dd($premis);
         $pdf = PDF::loadView('pdf.cetaknotis', [
             'notis' => $notis, 'premis'=>$premis
         ]);
