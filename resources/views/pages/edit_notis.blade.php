@@ -136,14 +136,15 @@
                                     </select>
                             
                                     <label>LOKASI</label>
-                                    <select class="form-control mb-3" name="lokasi">
+                                    <input type="text" name="lokasi" value="{{$notis->lokasi}}" class="form-control">
+                                    {{-- <select class="form-control mb-3" name="lokasi">
                                         <option @if ($notis->lokasi == 'Tingkat 1') selected @endif value="Tingkat 1">Tingkat 1</option>
                                         <option @if ($notis->lokasi == 'Tingkat 2') selected @endif value="Tingkat 2">Tingkat 2</option>
-                                        <option @if ($notis->lokasi == 'Tingkat 3') selected @endif value="Tingkat 3">Tingkat 3</option>
+                                        <option @if ($notis->lokasi == 'Tingkat 3') selected @endif value="Tingxkat 3">Tingkat 3</option>
                                         <option @if ($notis->lokasi == 'Tingkat 4') selected @endif value="Tingkat 4">Tingkat 4</option>
                                         <option @if ($notis->lokasi == 'Tingkat 5') selected @endif value="Tingkat 5">Tingkat 5</option>
                                         <option @if ($notis->lokasi == 'Lain') selected @endif value="lain">LAIN-LAIN</option>
-                                    </select>
+                                    </select> --}}
                                     
                                     <label>PEMBETULAN</label>
                                     <select class="form-control mb-3" name="pembetulan">

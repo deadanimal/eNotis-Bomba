@@ -89,10 +89,10 @@ class NotisController extends Controller
     {
         $notis = Notis::find($id);
 
-        $request->validate([
-            '$img_notis' => 'nullable'
+        // $request->validate([
+        //     '$img_notis' => 'nullable'
     
-            ]);
+        //     ]);
 
         //To Upload image into DB
         $notisa=$request->file('img_notis')->store('notis_img');
