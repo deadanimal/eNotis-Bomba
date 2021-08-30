@@ -44,11 +44,11 @@ class CustomAuthController extends Controller
 
     public function customRegistration(Request $request)
     {  
-        $request->validate([
-            'name' => 'required',
-            'email' => 'required|email|unique:users',
-            'password' => 'required|min:6',
-        ]);
+        //$request->validate([
+        //    'name' => 'required',
+        //    'email' => 'required|email|unique:users',
+        //    'password' => 'required|min:6',
+        //]);
            
         $data = $request->all();
         $check = $this->create($data);
