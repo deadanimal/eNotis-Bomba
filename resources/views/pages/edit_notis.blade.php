@@ -135,7 +135,7 @@
                                         <option @if ($notis->kesalahan == 'Rosak') selected @endif value='Rosak'>Rosak</option>
                                     </select>
 
-                                    <label>ARAS</label>
+                                    <label>ARAS {{$notis->aras}}</label>
                                     <input type="text" name="aras" value="{{$notis->aras}}" class="form-control mb-3">
 
                                         {{-- <select class="form-control mb-3" name="lokasi">
