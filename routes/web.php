@@ -25,7 +25,6 @@ Route::get('/notis-siap', [NotisController::class,'status_siap']);
 Route::get('/jadual-minggu', [NotisController::class,'jadual_minggu']);
 Route::get('/status-siap/{id}', [NotisController::class,'papar_notis']);
 Route::get('/cetak-notis/{id}',[NotisController::class,'cetaknotis']);
-Route::get('/cetak-notis/{id}',[NotisController::class,'cetaknotis']);
 
 Route::get('/', function () {
     return view('pages.main');

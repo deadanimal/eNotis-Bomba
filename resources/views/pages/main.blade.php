@@ -106,7 +106,7 @@
     </script>
     <!-- end Analytics-Optimize Snippet -->
     <!-- Google Tag Manager -->
-    <script>
+    {{-- <script>
         (function(w, d, s, l, i) {
             w[l] = w[l] || [];
             w[l].push({
@@ -121,14 +121,14 @@
                 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
             f.parentNode.insertBefore(j, f);
         })(window, document, 'script', 'dataLayer', 'GTM-NKDMSK6');
-    </script>
+    </script> --}}
     <!-- End Google Tag Manager -->
 </head>
 
 <body class="g-sidenav-show  bg-gray-100">
     <!-- Extra details for Live View on GitHub Pages -->
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NKDMSK6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    {{-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NKDMSK6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> --}}
     <!-- End Google Tag Manager (noscript) -->
 
     <div class="imgbg text-center">

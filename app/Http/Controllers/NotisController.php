@@ -50,6 +50,7 @@ class NotisController extends Controller
 
         // concat inputs
         $combined = 'JPBM/KL/TDI: 700-'.$request->input1.'/'.$request->input2.'/'.$request->input3.'/TDI'.'/'.$request->input4.'/2021';
+        $aras_notis = 'aras '.$request->aras;
 
         //To Upload image into DB
         $notisa=$request->file('img_notis')->store('notis_img'); 
@@ -59,7 +60,8 @@ class NotisController extends Controller
         $notis->no_siri=$combined;
         $notis->jenis_ppk=$request->jenis_ppk;
         $notis->kesalahan=$request->kesalahan;
-        $notis->aras=$request->aras;
+        $notis->aras=$aras_notis;
+       // $notis->aras=$request->aras;
         $notis->lokasi=$request->lokasi;
         $notis->pembetulan=$request->pembetulan;
         $notis->seksyen=$request->seksyen;
@@ -83,7 +85,7 @@ class NotisController extends Controller
     public function edit($id)
     {
         $notis= Notis::find($id);
-        $premis=Premis::where('id', $notis->id_premis)->get();
+        $premis=Premis::all();
         return view('pages.edit_notis',[
             'notis'=>$notis, 'premis'=>$premis]);
         

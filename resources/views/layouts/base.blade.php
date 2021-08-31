@@ -103,7 +103,7 @@
 <body class="g-sidenav-show  bg-gray-100">
     <!-- Extra details for Live View on GitHub Pages -->
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NKDMSK6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    {{-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NKDMSK6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> --}}
     <!-- End Google Tag Manager (noscript) -->
     <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3 " id="sidenav-main">
         <div class="sidenav-header">
@@ -248,7 +248,7 @@
     </aside>
 
     @yield('content')
-
+{{-- 
     <div class="fixed-plugin">
         <a class="fixed-plugin-button text-dark position-fixed px-3 py-2">
             <i class="fa fa-cog py-2"> </i>
@@ -322,7 +322,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!--   Core JS Files   -->
     <script src="../../assets/js/core/popper.min.js"></script>
     <script src="../../assets/js/core/bootstrap.min.js"></script>

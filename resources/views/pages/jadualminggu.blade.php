@@ -104,6 +104,7 @@
                                     <h6 class="text-dark text-sm font-weight-bold mb-0">{{$notis->no_siri}}</h6>
                                     <p class="text-secondary font-weight-bold text-xs mt-1 mb-0">{{$notis->tarikh_pemeriksaan}}</p>                       
                                     @endforeach
+
                                 </div>
                             </div>
 

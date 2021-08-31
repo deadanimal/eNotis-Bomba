@@ -96,93 +96,104 @@
                     <div class="row mt-3">
                         <div class="col-12 col-sm-8 mt-4 mt-sm-0 text-start">
                                     <label>TARIKH PEMERIKSAAN</label>
-                                    <input class="multisteps-form__input form-control mb-3" type="date" value="{{$notis->tarikh_pemeriksaan}}" name="tarikh_pemeriksaan" disabled/>
+                                    <input class="multisteps-form__input form-control mb-3" type="date" value='{{$notis->tarikh_pemeriksaan}}' name="tarikh_pemeriksaan" disabled/>
 
-                                    <label>Nama Premis</label>
-                                    @foreach ($premis as $premis)
-                                    <input type="text" name="id_premis" value="{{$premis->nama_premis}}" class="form-control" disabled>
-                                    @endforeach
-                                    {{-- <select class="form-control" name="id_premis" disabled>
+                                    <label>Nama Premis</label> 
+                                    <select class="multisteps-form__input form-control mb-3" name="id_premis" disabled>
                                         @foreach($premis as $premis)
-                                        <option @if ($notis->id_premis == {{$notis->id_premis}}) selected 
-                                            @endif value="{{$notis->id_premis}}">{{$premis->nama_premis}}
-                                        </option>
+                                        <option @if ($notis->id_premis=='{{$notis->id_premis}}') selected @endif value="{{$notis->id_premis}}">{{$premis->nama_premis}}</option>
                                         @endforeach 
-                                    </select> --}}
+                                    </select>
 
                                     <label>NO. SIRI RUJUKAN</label> 
-                                    <input type="text" name="no_siri" value="{{$notis->no_siri}}" class="form-control" disabled>
+                                    <input type="text" name="no_siri" value="{{$notis->no_siri}}"  class="multisteps-form__input form-control mb-3" disabled>
                                     
 
-                                    <label>JENIS PPK</label>
+                                    <label>JENIS PPK  </label>
                                     <select class="multisteps-form__input form-control mb-3" name="jenis_ppk" disabled>
-                                        <option @if ($notis->jenis_ppk == 'PAM JOKEY') selected @endif value="PAM JOKEY">PAM JOKEY</option>
-                                        <option @if ($notis->jenis_ppk == 'PAM DUTY') selected @endif value="PAM DUTY">PAM DUTY</option>
-                                        <option @if ($notis->jenis_ppk == 'PAM STANDBY') selected @endif value="PAM STANDBY">PAM STANDBY</option>
-                                        <option @if ($notis->jenis_ppk == 'PINTU API') selected @endif value="PINTU API">PINTU API</option>
-                                        <option @if ($notis->jenis_ppk == 'ALAT PEMADAM API') selected @endif value="ALAT PEMADAM API">ALAT PEMADAM API</option>
-                                        <option @if ($notis->jenis_ppk == 'TANGGA') selected @endif value="TANGGA">TANGGA</option>
-                                        <option @if ($notis->jenis_ppk == 'LAMPU KECEMASAN') selected @endif value="LAMPU KECEMASAN">LAMPU KECEMASAN</option>
-                                        <option @if ($notis->jenis_ppk == 'PANEL PENGGERA KEBAKARAN') selected @endif value="PANEL PENGGERA KEBAKARAN">PANEL PENGGERA KEBAKARAN</option>
-                                        <option @if ($notis->jenis_ppk == 'SISTEM PENGGERA KEBAKARAN UTAMA') selected @endif value="SISTEM PENGGERA KEBAKARAN UTAMA">SISTEM PENGGERA KEBAKARAN UTAMA</option>
-                                        <option @if ($notis->jenis_ppk == 'PILI BOMBA') selected @endif value="PILI BOMBA">PILI BOMBA</option> 
-                                        <option @if ($notis->jenis_ppk == 'PEMEGANG INJAP') selected @endif value="PEMEGANG INJAP">PEMEGANG INJAP SISTEM GELUNG HOS</option> 
+                                        <option @if ($notis->jenis_ppk == 'Pam Jokey') selected @endif value='Pam Jokey'>Pam Jokey</option>
+                                        <option @if ($notis->jenis_ppk == 'Pam Duty') selected @endif value='Pam Duty'>Pam Duty</option>
+                                        <option @if ($notis->jenis_ppk == 'Pam Standby') selected @endif value='Pam Standby' >Pam Standby</option>
+                                        <option @if ($notis->jenis_ppk == 'Pintu api') selected @endif value='Pintu api'>Pintu Api</option>
+                                        <option @if ($notis->jenis_ppk == 'Alat pemadam api') selected @endif value='Alat pemadam api'>Alat Pemadam Api</option>
+                                        <option @if ($notis->jenis_ppk == 'Tangga') selected @endif value='Tangga'>Tangga</option>
+                                        <option @if ($notis->jenis_ppk == 'Lampu kecemasan') selected @endif value='Lampu kecemasan'>Lampu Kecemasan</option>
+                                        <option @if ($notis->jenis_ppk == 'Sistem penggera kebakaran utama') selected @endif value='Sistem penggera kebakaran utama'>Sistem Penggera Kebakaran Utama</option>
+                                        <option @if ($notis->jenis_ppk == 'Tanda tempat kecemasan') selected @endif value='Tanda tempat kecemasan'>Tanda Tempat Kecemasan</option>
+                                        <option @if ($notis->jenis_ppk == 'Panel penggera kebakaran') selected @endif value='Panel penggera kebakaran'>Panel Penggera Kebakaran</option>
+                                        <option @if ($notis->jenis_ppk == 'Pili bomba') selected @endif value='Pili bomba'>Pili Bomba</option>
+
+
                                     </select>
 
-                                    <label>Kesalahan</label>
+                                    <label>KESALAHAN</label>
                                     <select name="kesalahan" class="form-control mb-3" disabled>
-                                        <option @if ($notis->kesalahan == 'TIADA') selected @endif value="TIADA">TIADA</option>
-                                        <option @if ($notis->kesalahan == 'TIDAK DISELENGGARA') selected @endif value="TIDAK DISELENGGARA">TIDAK DISELENGGARA
+                                        <option @if ($notis->kesalahan == 'tiada') selected @endif value='tiada'>Tiada</option>
+                                        <option @if ($notis->kesalahan == 'tidak diselenggara') selected @endif value="tidak Diselenggara">Tidak Diselenggara
                                         </option>
-                                        <option @if ($notis->kesalahan == 'TAMAT TEMPOH DAN TIDAK DISELENGGARA') selected @endif value="TAMAT TEMPOH DAN TIDAK DISELENGGARA">TAMAT
-                                            TEMPOH DAN TIDAK DISELENGGARA</option>
-                                        <option @if ($notis->kesalahan == 'ROSAK') selected @endif value="ROSAK">ROSAK</option>
-                                    </select> 
+                                        <option @if ($notis->kesalahan == 'tamat tempoh dan tidak diselenggara') selected @endif value="tamat tempoh dan tidak diselenggara" >Tamat Tempoh dan Tidak Diselenggara</option>
+                                        <option @if ($notis->kesalahan == 'rosak') selected @endif value="rosak">Rosak</option>
+                                    </select>
+
+                                    <label>ARAS/TINGKAT</label>
+                                    <input type="text" name="aras" value="{{$notis->aras}}" class="form-control mb-3" disabled>
+
+                                        {{-- <select class="form-control mb-3" name="lokasi">
+                                        <option @if ($notis->lokasi == 'Tingkat 1') selected @endif value="Tingkat 1">Tingkat 1</option>
+                                        <option @if ($notis->lokasi == 'Tingkat 2') selected @endif value="Tingkat 2">Tingkat 2</option>
+                                        <option @if ($notis->lokasi == 'Tingkat 3') selected @endif value="Tingxkat 3">Tingkat 3</option>
+                                        <option @if ($notis->lokasi == 'Tingkat 4') selected @endif value="Tingkat 4">Tingkat 4</option>
+                                        <option @if ($notis->lokasi == 'Tingkat 5') selected @endif value="Tingkat 5">Tingkat 5</option>
+                                        <option @if ($notis->lokasi == 'Lain') selected @endif value="lain">LAIN-LAIN</option>
+                                    </select> --}}
+
                             
                                     <label>LOKASI</label>
-                                    <select class="form-control mb-3" name="lokasi" disabled>
-                                        <option @if ($notis->lokasi == 'TINGKAT 1') selected @endif value="TINGKAT 1">TINGKAT 1</option>
-                                        <option @if ($notis->lokasi == 'TINGKAT 2') selected @endif value="TINGKAT 2">TINGKAT 2</option>
-                                        <option @if ($notis->lokasi== 'TINGKAT 3') selected @endif value="TINGKAT 3">TINGKAT 3</option>
-                                        <option @if ($notis->lokasi == 'TINGKAT 4') selected @endif value="TINGKAT 4">TINGKAT 4</option>
-                                        <option @if ($notis->lokasi == 'TINGKAT 5') selected @endif value="TINGKAT 5">TINGKAT 5</option>
-                                        <option @if ($notis->lokasi == 'LAIN-LAIN') selected @endif value="LAIN-LAIN">LAIN-LAIN. SILA NYATAKAN</option>
-                                    </select>
+                                    <input type="text" name="lokasi" value="{{$notis->lokasi}}" class="form-control mb-3"disabled>
+                                    {{-- <select class="form-control mb-3" name="lokasi">
+                                        <option @if ($notis->lokasi == 'Tingkat 1') selected @endif value="Tingkat 1">Tingkat 1</option>
+                                        <option @if ($notis->lokasi == 'Tingkat 2') selected @endif value="Tingkat 2">Tingkat 2</option>
+                                        <option @if ($notis->lokasi == 'Tingkat 3') selected @endif value="Tingxkat 3">Tingkat 3</option>
+                                        <option @if ($notis->lokasi == 'Tingkat 4') selected @endif value="Tingkat 4">Tingkat 4</option>
+                                        <option @if ($notis->lokasi == 'Tingkat 5') selected @endif value="Tingkat 5">Tingkat 5</option>
+                                        <option @if ($notis->lokasi == 'Lain') selected @endif value="lain">LAIN-LAIN</option>
+                                    </select> --}}
                                     
                                     <label>PEMBETULAN</label>
                                     <select class="form-control mb-3" name="pembetulan" disabled>
-                                        <option @if ($notis->pembetulan == 'MENGADAKAN') selected @endif value="MENGADAKAN">MENGADAKAN</option>
-                                        <option @if ($notis->pembetulan == 'MEMBAIK PULIH') selected @endif value="MEMBAIK PULIH">MEMBAIK PULIH</option>
-                                        <option @if ($notis->pembetulan == 'MEMBUAT PENYELENGARAAN') selected @endif value="MEMBUAT PENYELENGARAAN">MEMBUAT
-                                            PENYELENGARAAN</option>
-                                        <option @if ($notis->pembetulan== 'MEMBUKA HALANGAN') selected @endif value="MEMBUKA HALANGAN">MEMBUKA HALANGAN</option>
-                                        <option @if ($notis->pembetulan == 'LAIN-LAIN') selected @endif value="LAIN-LAIN">LAIN-LAIN</option>
-
+                                        <option @if ($notis->pembetulan == 'mengadakan') selected @endif value="mengadakan">Mengadakan</option>
+                                        <option  @if ($notis->pembetulan == 'membaik pulih') selected @endif value="membaik Pulih">Membaik pulih</option>
+                                        <option @if ($notis->pembetulan == 'membuat penyelengaraan') selected @endif value="membuat penyelengaraan">Membuat
+                                            penyelengaraan</option>
+                                        <option @if ($notis->pembetulan== 'membuka halangan') selected @endif value="membuka halangan">Membuka halangan</option>
                                     </select>
 
-                                    <label>SEKSYEN</label>
+                                    <label>Seksyen</label>
                                     <select class="form-control mb-3" name="seksyen" disabled>
-                                        <option @if ($notis->seksyen == 'SEKSYEN 2(A)') selected @endif value="SEKSYEN 2(A)">SEKSYEN 2(A)</option>
-                                        <option @if ($notis->seksyen == 'SEKSYEN 2(B)') selected @endif value="SEKSYEN 2(B)">SEKSYEN 2(B)</option>
-                                        <option @if ($notis->seksyen == 'SEKSYEN 2(C)') selected @endif value="SEKSYEN 2(C)">SEKSYEN 2(C)</option>
-                                        <option @if ($notis->seksyen == 'SEKSYEN 2(D)') selected @endif value="SEKSYEN 2(D)">SEKSYEN 2(D)</option>
-                                        <option @if ($notis->seksyen == 'SEKSYEN 2(E)') selected @endif value="SEKSYEN 2(E)">SEKSYEN 2(E)</option>
-                                        <option @if ($notis->seksyen == 'SEKSYEN 2(F)') selected @endif value="SEKSYEN 2(F)">SEKSYEN 2(F)</option>
+                                        <option @if ($notis->seksyen == 'Seksyen 2(A)') selected @endif value="Seksyen 2(A)">Seksyen 2(A)</option>
+                                        <option @if ($notis->seksyen == 'Seksyen 2(B)') selected @endif value="Seksyen 2(B)">Seksyen 2(B)</option>
+                                        <option @if ($notis->seksyen == 'Seksyen 2(C)') selected @endif value="Seksyen 2(C)">Seksyen 2(C)</option>
+                                        <option @if ($notis->seksyen == 'Seksyen 2(D)') selected @endif value="Seksyen 2(D)">Seksyen 2(D)</option>
+                                        <option @if ($notis->seksyen == 'Seksyen 2(E)') selected @endif value="Seksyen 2(E)">Seksyen 2(E)</option>
+                                        <option @if ($notis->seksyen == 'Seksyen 2(F)') selected @endif value="Seksyen 2(F)">Seksyen 2(F)</option>
+
                                     </select>
 
                                     <label>TEMPOH</label>
-                                    <select class="form-control mb-3" name="tempoh"disabled>
-                                        <option @if ($notis->tempoh == '30 HARI') selected @endif value="30 HARI">30 HARI</option>
-                                        <option @if ($notis->tempoh == '60 HARI') selected @endif value="60 HARI">60 HARI</option>
-                                        <option @if ($notis->tempoh == '90 HARI') selected @endif value="90 HARI">90 HARI</option>
-                                        <option @if ($notis->tempoh == '120 HARI') selected @endif value="120 HARI">120 HARI</option>
-                                        <option @if ($notis->tempoh == '150 HARI') selected @endif value="30 HARI">150 HARI</option>
+                                    <select class="form-control mb-3" name="tempoh" disabled>
+                                        <option @if ($notis->tempoh == '30 hari') selected @endif value="30 hari">30 Hari</option>
+                                        <option @if ($notis->tempoh == '60 hari') selected @endif value="60 hari">60 Hari</option>
+                                        <option @if ($notis->tempoh == '90 hari') selected @endif value="90 hari">90 Hari</option>
+                                        <option @if ($notis->tempoh == '120 hari') selected @endif value="120 hari">120 Hari</option>
+                                        <option @if ($notis->tempoh == '150 hari') selected @endif value="150 hari">150 Hari</option>
+                                        <option @if ($notis->tempoh == '180 hari') selected @endif value="180 hari">180 Hari</option>
+                                        <option @if ($notis->tempoh == '360 hari') selected @endif value="360 hari">360 Hari</option>
                                     </select>
 
                                     <label>STATUS</label>
                                     <select class="form-control mb-3" name="status"disabled>
-                                        <option @if ($notis->status =='Siap') selected @endif value="Siap">SIAP</option>
-                                        <option @if ($notis->status =='Hantar') selected @endif value="Hantar">HANTAR</option>
+                                        <option @if ($notis->status =='Siap') selected @endif value="Siap">Siap</option>
+                                        <option @if ($notis->status =='Hantar') selected @endif value="Hantar">Hantar</option>
                                     </select>
 
         
@@ -193,7 +204,7 @@
                             <div class="col-xl-12">
                                 {{-- <button class="btn btn-success w-100 mt-3 mb-2" onclick="soft.showSwal('success-message')">Kemaskini</button> --}}
                                 <a href="/cetak-notis/{{$notis->id}}" class="btn btn-success w-100 mt-3 mb-2">Cetak</a>
-                                <a href="/notis" class="btn btn-secondary w-100">Kembali</a>
+                                <a href="/notis-siap" class="btn btn-secondary w-100">Kembali</a>
                                 {{-- <button class="btn btn-success w-100" data-bs-toggle="modal" data-bs-target="#emailModal">Hantar</button> --}}
 
                             </div>

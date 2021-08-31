@@ -158,6 +158,7 @@
                                                  <div class="input-group">
                                                     <span class="input-group-text">JPBM/KL/TDI: 700-</span>
                                                     <input type="text" aria-label="input1" class="multisteps-form__input form-control" name="input1">
+                                                    
                                                     <span class="input-group-text">/</span>
                                                     <input type="text" aria-label="input2" class="multisteps-form__input form-control" name="input2">
                                                     <span class="input-group-text">/</span>
@@ -205,23 +206,29 @@
                                                 <label>KESALAHAN</label>
                                                 <select class="multisteps-form__input form-control mb-3" name="kesalahan">
                                                     <option hidden selected>Sila Pilih</option>
-                                                    <option value="Tiada">Tiada</option>
-                                                    <option value="Tidak Diselenggara">Tidak Diselenggara</option>
-                                                    <option value="Tamat tempoh dan Tidak diselenggara">Tamat tempoh dan Tidak Diselenggara</option>
-                                                    <option value="Rosak">Rosak</option>
+                                                    <option value="tiada">Tiada</option>
+                                                    <option value="tidak Diselenggara">Tidak Diselenggara</option>
+                                                    <option value="tamat tempoh dan Tidak diselenggara">Tamat tempoh dan Tidak Diselenggara</option>
+                                                    <option value="rosak">Rosak</option>
                                                     <!-- <option value="5">5</option> -->
                                                 </select>
                                                 <label>ARAS/TINGKAT</label>
-                                                <select class="multisteps-form__input form-control mb-3" id="lokasi" name="aras" >
+                                                <div class="input-group">
+                                                    <span class="input-group-text">Aras</span>
+                                                    <input type="number" aria-label="aras" class="multisteps-form__input form-control" name="aras">
+                                                </div>
+                                                
+
+                                                {{-- <select class="multisteps-form__input form-control mb-3" name="aras" id="aras">
                                                     <option hidden selected>Sila Pilih</option>
-                                                    <option value="Aras 1">Aras 1</option>
-                                                    <option value="Aras 2">Aras 2</option>
-                                                    <option value="Aras 3">Aras 3</option>
-                                                    <option value="Aras 4">Aras 4</option>
-                                                    <option value="Aras 5">Aras 5</option>
-                                                    <option value="Lain">Lain-Lain</option>
+                                                    <option value="aras 1">Aras 1</option>
+                                                    <option value="aras 2">Aras 2</option>
+                                                    <option value="aras 3">Aras 3</option>
+                                                    <option value="aras 4">Aras 4</option>
+                                                    <option value="aras 5">Aras 5</option>
+                                                    <option value="lain">Lain-Lain</option>
                                                 </select>
-                                                <input type="text" name="aras" id="lokasi_lain"  class="multisteps-form__input form-control mb-3" style="display: none">
+                                                <input type="text" name="lokasi_lain " id="lokasi_lain"  class="multisteps-form__input form-control mb-3" style="display: none"> --}}
 
                                                 <label>LOKASI</label>
                                                 <input type="text" name="lokasi" class="multisteps-form__input form-control mb-3">
@@ -230,10 +237,10 @@
                                                 <label>PEMBETULAN</label>
                                                 <select class="multisteps-form__input form-control mb-3" name="pembetulan">
                                                     <option hidden selected>Sila Pilih</option>
-                                                    <option value="Mengadakan">Mengadakan</option>
-                                                    <option value="Membaik pulih">Membaik Pulih</option>
-                                                    <option value="Membuat penyelengaraan">Membuat Penyelengaraan</option>
-                                                    <option value="Membuka halangan">Membuka Halangan</option>
+                                                    <option value="mengadakan">Mengadakan</option>
+                                                    <option value="membaik pulih">Membaik Pulih</option>
+                                                    <option value="membuat penyelengaraan">Membuat Penyelengaraan</option>
+                                                    <option value="membuka halangan">Membuka Halangan</option>
                                                 </select>
 
                                                 <label>Seksyen</label>
@@ -249,13 +256,13 @@
                                                 <label>TEMPOH</label>
                                                 <select class="multisteps-form__input form-control mb-3" name="tempoh">
                                                     <option hidden selected>Sila Pilih</option>
-                                                    <option value="30 Hari">30 Hari</option>
-                                                    <option value="60 Hari">60 Hari</option>
-                                                    <option value="90 Hari">90 Hari</option>
-                                                    <option value="120 Hari">120 Hari</option>
-                                                    <option value="150 Hari">150 Hari</option>
-                                                    <option value="180 Hari">180 Hari</option>
-                                                    <option value="360 Hari">360 Hari</option>
+                                                    <option value="30 hari">30 Hari</option>
+                                                    <option value="60 hari">60 Hari</option>
+                                                    <option value="90 hari">90 Hari</option>
+                                                    <option value="120 hari">120 Hari</option>
+                                                    <option value="150 hari">150 Hari</option>
+                                                    <option value="180 hari">180 Hari</option>
+                                                    <option value="360 hari">360 Hari</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -320,9 +327,10 @@
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
             <script type="text/javascript">
                  $(function() {
-                      $("#lokasi").change(function() {
-                              if ($(this).val() == "Lain") {
+                      $("#aras").change(function() {
+                              if ($(this).val() == "lain") {
                                 $("#lokasi_lain").show();
+
                                } else {
                                $("#lokasi_lain").hide();
                                }
