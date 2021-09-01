@@ -14,7 +14,7 @@ class NotisSeeder extends Seeder
     public function run()
     {
         Notis::create ([
-            'tarikh_pemeriksaan'=>'2021-08-01',
+            'tarikh_pemeriksaan'=>'01/01/2021',
             'jenis_ppk'=>'Pam Duty',
             'no_siri'=>'JPBM/KL/TDI: 700-1/2/3/TDI/3/2021',
             'kesalahan'=>'rosak',
@@ -29,7 +29,7 @@ class NotisSeeder extends Seeder
         ]);
 
         Notis::create ([
-            'tarikh_pemeriksaan'=>'2021-07-01',
+            'tarikh_pemeriksaan'=>'01/09/2021',
             'jenis_ppk'=>'Alat pemadam api',
             'no_siri'=>'JPBM/KL/TDI: 700-1/2/4/TDI/4/2021',
             'kesalahan'=>'rosak',

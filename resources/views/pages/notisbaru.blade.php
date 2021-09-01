@@ -141,7 +141,7 @@
                                         <div class="row mt-3">
                                             <div class="col-12 col-sm-8 mt-4 mt-sm-0 text-start">
                                                 <label>TARIKH PEMERIKSAAN</label>
-                                                <input class="multisteps-form__input form-control mb-3" type="date" placeholder="2021-01-01" name="tarikh_pemeriksaan" />
+                                                <input class="multisteps-form__input form-control mb-3" type="date" placeholder="01-01-2021" name="tarikh_pemeriksaan" />
                                                 <label>NAMA PREMIS</label>
                                                 {{-- <input class="multisteps-form__input form-control mb-3" name="nama_premis" type="text" placeholder="Pipeline Network Sdn Bhd" /> --}}
                                                 <select class="multisteps-form__input form-control mb-3" name="id_premis">
