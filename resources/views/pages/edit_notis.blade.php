@@ -132,10 +132,10 @@
                                     <label>KESALAHAN</label>
                                     <select name="kesalahan" class="form-control mb-3">
                                         <option @if ($notis->kesalahan == 'tiada') selected @endif value='tiada'>Tiada</option>
-                                        <option @if ($notis->kesalahan == 'tidak diselenggara') selected @endif value="tidak diselenggara">Tidak Diselenggara
+                                        <option @if ($notis->kesalahan == 'tidak diselenggara') selected @endif value='tidak diselenggara'>Tidak Diselenggara
                                         </option>
-                                        <option @if ($notis->kesalahan == 'tamat tempoh dan tidak diselenggara') selected @endif value="tamat tempoh dan tidak diselenggara" >Tamat Tempoh dan Tidak Diselenggara</option>
-                                        <option @if ($notis->kesalahan == 'rosak') selected @endif value="rosak">Rosak</option>
+                                        <option @if ($notis->kesalahan == 'tamat tempoh dan tidak diselenggara') selected @endif value='tamat tempoh dan tidak diselenggara'>Tamat Tempoh dan Tidak Diselenggara</option>
+                                        <option @if ($notis->kesalahan == 'rosak') selected @endif value='rosak'>Rosak</option>
                                     </select>
 
                                     <label>ARAS/TINGKAT</label>
