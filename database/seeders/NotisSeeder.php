@@ -35,7 +35,7 @@ class NotisSeeder extends Seeder
             'kesalahan'=>'rosak',
             'aras'=>'aras 7',
             'lokasi'=>'belakang',
-            'pembetulan'=>'mengadakan',
+            'pembetulan'=>'membaik pulih',
             'seksyen'=>'Seksyen 2(C)',
             'tempoh'=>'120 hari',
             'status'=>'Hantar',

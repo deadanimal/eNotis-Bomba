@@ -109,6 +109,7 @@
                                 <option @if ($premis->jenis_perniagaan == '6') selected @endif value="6">Kilang</option>
                                 <option @if ($premis->jenis_perniagaan == '7') selected @endif value="7">Tempat Perhimpunan</option>
                                 <option @if ($premis->jenis_perniagaan == '8') selected @endif value="8">Storan dan Am</option>
+                                <option @if ($premis->jenis_perniagaan == '9') selected @endif value="9">Kedai</option>
 
                             </select>
                         </div>

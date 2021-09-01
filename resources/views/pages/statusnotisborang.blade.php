@@ -129,7 +129,7 @@
                                     <label>KESALAHAN</label>
                                     <select name="kesalahan" class="form-control mb-3" disabled>
                                         <option @if ($notis->kesalahan == 'tiada') selected @endif value='tiada'>Tiada</option>
-                                        <option @if ($notis->kesalahan == 'tidak diselenggara') selected @endif value="tidak Diselenggara">Tidak Diselenggara
+                                        <option @if ($notis->kesalahan == 'tidak diselenggara') selected @endif value="tidak diselenggara">Tidak Diselenggara
                                         </option>
                                         <option @if ($notis->kesalahan == 'tamat tempoh dan tidak diselenggara') selected @endif value="tamat tempoh dan tidak diselenggara" >Tamat Tempoh dan Tidak Diselenggara</option>
                                         <option @if ($notis->kesalahan == 'rosak') selected @endif value="rosak">Rosak</option>
@@ -162,7 +162,7 @@
                                     <label>PEMBETULAN</label>
                                     <select class="form-control mb-3" name="pembetulan" disabled>
                                         <option @if ($notis->pembetulan == 'mengadakan') selected @endif value="mengadakan">Mengadakan</option>
-                                        <option  @if ($notis->pembetulan == 'membaik pulih') selected @endif value="membaik Pulih">Membaik pulih</option>
+                                        <option  @if ($notis->pembetulan == 'membaik pulih') selected @endif value="membaik pulih">Membaik pulih</option>
                                         <option @if ($notis->pembetulan == 'membuat penyelengaraan') selected @endif value="membuat penyelengaraan">Membuat
                                             penyelengaraan</option>
                                         <option @if ($notis->pembetulan== 'membuka halangan') selected @endif value="membuka halangan">Membuka halangan</option>

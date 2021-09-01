@@ -109,6 +109,7 @@
                         <option value="6">Kilang</option>
                         <option value="7">Tempat Perhimpunan</option>
                         <option value="8">Storan dan Am</option>
+                        <option value="9">Kedai</option>
                     </select>
                 </div>
             </div>

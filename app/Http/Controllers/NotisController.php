@@ -85,7 +85,7 @@ class NotisController extends Controller
     public function edit($id)
     {
         $notis= Notis::find($id);
-        $premis=Premis::all();
+        $premis=Premis::where('id', $notis->id_premis)->get();
         return view('pages.edit_notis',[
             'notis'=>$notis, 'premis'=>$premis]);
         
