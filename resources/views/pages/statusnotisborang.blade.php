@@ -122,7 +122,7 @@
                                         <option @if ($notis->jenis_ppk == 'Tanda tempat kecemasan') selected @endif value='Tanda tempat kecemasan'>Tanda Tempat Kecemasan</option>
                                         <option @if ($notis->jenis_ppk == 'Panel penggera kebakaran') selected @endif value='Panel penggera kebakaran'>Panel Penggera Kebakaran</option>
                                         <option @if ($notis->jenis_ppk == 'Pili bomba') selected @endif value='Pili bomba'>Pili Bomba</option>
-
+                                        <option @if ($notis->jenis_ppk == 'Pemegang injap sistem gelung hos') selected @endif value='Pemegang injap sistem gelung hos'>Pemegang Injap Sistem Gelung Hos</option>
 
                                     </select>
 

@@ -192,16 +192,15 @@
                                                         <option value="Pam Standby">Pam Standby</option>
                                             
                                                     <!-- <option value="1">PAM</option> -->
-                                                    <option value="Pintu Api">Pintu Api</option>
-                                                    <option value="Alat Pemadam Api">Alat Pemadam Api</option>
-                                                    <option value="Lampu Kecemasan">Lampu Kecemasan</option>
-                                                    <option value="Tanda Tempat Kecemasan">Tanda Tempat Kecemasan</option>
+                                                    <option value="Pintu api">Pintu Api</option>
+                                                    <option value="Alat pemadam api">Alat Pemadam Api</option>
+                                                    <option value="Lampu kecemasan">Lampu Kecemasan</option>
+                                                    <option value="Tanda tempat kecemasan">Tanda Tempat Kecemasan</option>
                                                     <option value="Tangga">Tangga</option>
-                                                    <option value="Pemegang Injap">Pemegang Injap Sistem Gelung Hos</option>
-                                                    <option value="Tanda Kecemasan">Tanda Tempat Kecemasan</option>
-                                                    <option value="Panel Penggera Kebakaran">Panel Penggera Kebakaran</option>
-                                                    <option value="Sistem Penggera Kebakaran Utama">Sistem Penggera Kebakaran Utama</option>
-                                                    <option value="Pili Bomba">Pili Bomba</option>
+                                                    <option value="Pemegang injap sistem gelung hos">Pemegang Injap Sistem Gelung Hos</option>
+                                                    <option value="Panel penggera kebakaran">Panel Penggera Kebakaran</option>
+                                                    <option value="Sistem penggera kebakaran utama">Sistem Penggera Kebakaran Utama</option>
+                                                    <option value="Pili bomba">Pili Bomba</option>
                                                 </select>
                                                 <label>KESALAHAN</label>
                                                 <select class="multisteps-form__input form-control mb-3" name="kesalahan">

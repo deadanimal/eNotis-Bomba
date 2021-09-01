@@ -111,17 +111,20 @@
 
                                     <label>JENIS PPK  </label>
                                     <select class="multisteps-form__input form-control mb-3" name="jenis_ppk">
+
                                         <option @if ($notis->jenis_ppk == 'Pam Jokey') selected @endif value='Pam Jokey'>Pam Jokey</option>
                                         <option @if ($notis->jenis_ppk == 'Pam Duty') selected @endif value='Pam Duty'>Pam Duty</option>
                                         <option @if ($notis->jenis_ppk == 'Pam Standby') selected @endif value='Pam Standby' >Pam Standby</option>
                                         <option @if ($notis->jenis_ppk == 'Pintu api') selected @endif value='Pintu api'>Pintu Api</option>
                                         <option @if ($notis->jenis_ppk == 'Alat pemadam api') selected @endif value='Alat pemadam api'>Alat Pemadam Api</option>
-                                        <option @if ($notis->jenis_ppk == 'Tangga') selected @endif value='Tangga'>Tangga</option>
                                         <option @if ($notis->jenis_ppk == 'Lampu kecemasan') selected @endif value='Lampu kecemasan'>Lampu Kecemasan</option>
                                         <option @if ($notis->jenis_ppk == 'Sistem penggera kebakaran utama') selected @endif value='Sistem penggera kebakaran utama'>Sistem Penggera Kebakaran Utama</option>
                                         <option @if ($notis->jenis_ppk == 'Tanda tempat kecemasan') selected @endif value='Tanda tempat kecemasan'>Tanda Tempat Kecemasan</option>
                                         <option @if ($notis->jenis_ppk == 'Panel penggera kebakaran') selected @endif value='Panel penggera kebakaran'>Panel Penggera Kebakaran</option>
                                         <option @if ($notis->jenis_ppk == 'Pili bomba') selected @endif value='Pili bomba'>Pili Bomba</option>
+                                        <option @if ($notis->jenis_ppk == 'Tangga') selected @endif value='Tangga'>Tangga</option>
+                                        <option @if ($notis->jenis_ppk == 'Pemegang injap sistem gelung hos') selected @endif value='Pemegang injap sistem gelung hos'>Pemegang Injap Sistem Gelung Hos</option>
+
 
 
                                     </select>
