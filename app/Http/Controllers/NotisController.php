@@ -166,7 +166,7 @@ class NotisController extends Controller
         //dd($notis->tarikh_pemeriksaan);
         setlocale(LC_ALL, 'ms_MY');
         $date = new DateTime($notis->tarikh_pemeriksaan);
-        $tarikh_pemeriksaan = $date->format('d M Y');
+        $tarikh_pemeriksaan = $date->format('d/m/Y');
 
         $notis->status = "Hantar";
         $notis->save();
