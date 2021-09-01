@@ -6,6 +6,7 @@ use App\Models\Notis;
 use App\Models\Premis;
 use \PDF;
 
+use DateTime;
 
 
 use Illuminate\Http\Request;
@@ -162,12 +163,17 @@ class NotisController extends Controller
         $notis= Notis::find($id);
         $premis=Premis::where('id', $notis->id_premis)->get();
 
+        //dd($notis->tarikh_pemeriksaan);
+        setlocale(LC_ALL, 'ms_MY');
+        $date = new DateTime($notis->tarikh_pemeriksaan);
+        $tarikh_pemeriksaan = $date->format('d M Y');
+
         $notis->status = "Hantar";
         $notis->save();
 
         // dd($premis);
         $pdf = PDF::loadView('pdf.cetaknotis', [
-            'notis' => $notis, 'premis'=>$premis
+            'notis' => $notis, 'premis'=>$premis, 'tarikh_pemeriksaan'=> $tarikh_pemeriksaan
         ]);
         return $pdf->download($notis->no_siri.'.pdf');
 
