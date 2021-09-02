@@ -206,8 +206,8 @@
                                                 <select class="multisteps-form__input form-control mb-3" name="kesalahan">
                                                     <option hidden selected>Sila Pilih</option>
                                                     <option value="tiada">Tiada</option>
-                                                    <option value="tidak Diselenggara">Tidak Diselenggara</option>
-                                                    <option value="tamat tempoh dan Tidak diselenggara">Tamat tempoh dan Tidak Diselenggara</option>
+                                                    <option value="tidak diselenggara">Tidak Diselenggara</option>
+                                                    <option value="tamat tempoh dan tidak diselenggara">Tamat tempoh dan tidak diselenggara</option>
                                                     <option value="rosak">Rosak</option>
                                                     <!-- <option value="5">5</option> -->
                                                 </select>

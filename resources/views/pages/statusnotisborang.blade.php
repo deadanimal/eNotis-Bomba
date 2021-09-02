@@ -170,12 +170,12 @@
 
                                     <label>Seksyen</label>
                                     <select class="form-control mb-3" name="seksyen" disabled>
-                                        <option @if ($notis->seksyen == 'Seksyen 2(A)') selected @endif value="Seksyen 2(A)">Seksyen 2(A)</option>
-                                        <option @if ($notis->seksyen == 'Seksyen 2(B)') selected @endif value="Seksyen 2(B)">Seksyen 2(B)</option>
-                                        <option @if ($notis->seksyen == 'Seksyen 2(C)') selected @endif value="Seksyen 2(C)">Seksyen 2(C)</option>
-                                        <option @if ($notis->seksyen == 'Seksyen 2(D)') selected @endif value="Seksyen 2(D)">Seksyen 2(D)</option>
-                                        <option @if ($notis->seksyen == 'Seksyen 2(E)') selected @endif value="Seksyen 2(E)">Seksyen 2(E)</option>
-                                        <option @if ($notis->seksyen == 'Seksyen 2(F)') selected @endif value="Seksyen 2(F)">Seksyen 2(F)</option>
+                                        <option @if ($notis->seksyen == 'Seksyen 2(A)') selected @endif value='Seksyen 2(A)'>Seksyen 2(A)</option>
+                                        <option @if ($notis->seksyen == 'Seksyen 2(B)') selected @endif value='Seksyen 2(B)'>Seksyen 2(B)</option>
+                                        <option @if ($notis->seksyen == 'Seksyen 2(C)') selected @endif value='Seksyen 2(C)'>Seksyen 2(C)</option>
+                                        <option @if ($notis->seksyen == 'Seksyen 2(D)') selected @endif value='Seksyen 2(D)'>Seksyen 2(D)</option>
+                                        <option @if ($notis->seksyen == 'Seksyen 2(E)') selected @endif value='Seksyen 2(E)'>Seksyen 2(E)</option>
+                                        <option @if ($notis->seksyen == 'Seksyen 2(F)') selected @endif value='Seksyen 2(F)'>Seksyen 2(F)</option>
 
                                     </select>
 

@@ -124,17 +124,15 @@
                                         <option @if ($notis->jenis_ppk == 'Pili bomba') selected @endif value='Pili bomba'>Pili Bomba</option>
                                         <option @if ($notis->jenis_ppk == 'Tangga') selected @endif value='Tangga'>Tangga</option>
                                         <option @if ($notis->jenis_ppk == 'Pemegang injap sistem gelung hos') selected @endif value='Pemegang injap sistem gelung hos'>Pemegang Injap Sistem Gelung Hos</option>
-
-
-
                                     </select>
 
                                     <label>KESALAHAN</label>
-                                    <select name="kesalahan" class="form-control mb-3">
+                                    <select class="multisteps-form__input form-control mb-3" name="kesalahan">
+
                                         <option @if ($notis->kesalahan == 'tiada') selected @endif value='tiada'>Tiada</option>
-                                        <option @if ($notis->kesalahan == 'tidak diselenggara') selected @endif value='tidak diselenggara'>Tidak Diselenggara
+                                        <option @if ($notis->kesalahan == 'tidak diselenggara') selected @endif value='tidak diselenggara'>Tidak diselenggara
                                         </option>
-                                        <option @if ($notis->kesalahan == 'tamat tempoh dan tidak diselenggara') selected @endif value='tamat tempoh dan tidak diselenggara'>Tamat Tempoh dan Tidak Diselenggara</option>
+                                        <option @if ($notis->kesalahan == 'tamat tempoh dan tidak diselenggara') selected @endif value='tamat tempoh dan tidak diselenggara'>Tamat tempoh dan tidak diselenggara</option>
                                         <option @if ($notis->kesalahan == 'rosak') selected @endif value='rosak'>Rosak</option>
                                     </select>
 
@@ -162,11 +160,11 @@
                                         <option @if ($notis->lokasi == 'Lain') selected @endif value="lain">LAIN-LAIN</option>
                                     </select> --}}
                                     
-                                    <label>PEMBETULAN</label>
+                                    <label>PEMBETULAN</label>{{$notis->pembetulan}}
                                     <select class="form-control mb-3" name="pembetulan">
-                                        <option @if ($notis->pembetulan == 'mengadakan') selected @endif value="mengadakan">Mengadakan</option>
-                                        <option  @if ($notis->pembetulan == 'membaik pulih') selected @endif value="membaik pulih">Membaik pulih</option>
-                                        <option @if ($notis->pembetulan == 'membuat penyelengaraan') selected @endif value="membuat penyelengaraan">Membuat
+                                        <option @if ($notis->pembetulan == 'mengadakan') selected @endif value='mengadakan'>Mengadakan</option>
+                                        <option  @if ($notis->pembetulan == 'membaik pulih') selected @endif value='membaik pulih'>Membaik pulih</option>
+                                        <option @if ($notis->pembetulan == 'membuat penyelengaraan') selected @endif value='membuat penyelengaraan'>Membuat
                                             penyelengaraan</option>
                                         <option @if ($notis->pembetulan== 'membuka halangan') selected @endif value="membuka halangan">Membuka halangan</option>
                                     </select>
