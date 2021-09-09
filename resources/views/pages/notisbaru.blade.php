@@ -156,7 +156,7 @@
                                                 {{--<input type="text" name="no_siri" class="multisteps-form__input form-control mb-3"> --}}
                                                 <!-- <input class="multisteps-form__input form-control mb-3" type="text" placeholder="Eg. JPBM" /> -->
                                                  <div class="input-group">
-                                                    <span class="input-group-text">JPBM/KL/TDI: 700-</span>
+                                                    <span class="input-group-text">JPBM/KL/TDI:700-</span>
                                                     <input type="text" aria-label="input1" class="multisteps-form__input form-control" name="input1">
                                                     
                                                     <span class="input-group-text">/</span>
@@ -192,15 +192,15 @@
                                                         <option value="Pam Standby">Pam Standby</option>
                                             
                                                     <!-- <option value="1">PAM</option> -->
-                                                    <option value="Pintu api">Pintu Api</option>
-                                                    <option value="Alat pemadam api">Alat Pemadam Api</option>
-                                                    <option value="Lampu kecemasan">Lampu Kecemasan</option>
-                                                    <option value="Tanda tempat kecemasan">Tanda Tempat Kecemasan</option>
-                                                    <option value="Tangga">Tangga</option>
-                                                    <option value="Pemegang injap sistem gelung hos">Pemegang Injap Sistem Gelung Hos</option>
-                                                    <option value="Panel penggera kebakaran">Panel Penggera Kebakaran</option>
-                                                    <option value="Sistem penggera kebakaran utama">Sistem Penggera Kebakaran Utama</option>
-                                                    <option value="Pili bomba">Pili Bomba</option>
+                                                    <option value="pintu api">Pintu Api</option>
+                                                    <option value="alat pemadam api">Alat Pemadam Api</option>
+                                                    <option value="lampu kecemasan">Lampu Kecemasan</option>
+                                                    <option value="tanda tempat kecemasan">Tanda Tempat Kecemasan</option>
+                                                    <option value="tangga">Tangga</option>
+                                                    <option value="pemegang injap sistem gelung hos">Pemegang Injap Sistem Gelung Hos</option>
+                                                    <option value="panel penggera kebakaran">Panel Penggera Kebakaran</option>
+                                                    <option value="sistem penggera kebakaran utama">Sistem Penggera Kebakaran Utama</option>
+                                                    <option value="pili bomba">Pili Bomba</option>
                                                 </select>
                                                 <label>KESALAHAN</label>
                                                 <select class="multisteps-form__input form-control mb-3" name="kesalahan">

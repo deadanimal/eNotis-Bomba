@@ -15,7 +15,7 @@ class NotisSeeder extends Seeder
     {
         Notis::create ([
             'tarikh_pemeriksaan'=>'2021-08-01',
-            'jenis_ppk'=>'Pam Duty',
+            'jenis_ppk'=>'Pam Jokey',
             'no_siri'=>'JPBM/KL/TDI: 700-1/2/3/TDI/3/2021',
             'kesalahan'=>'rosak',
             'aras'=>'aras 6',
@@ -30,7 +30,7 @@ class NotisSeeder extends Seeder
 
         Notis::create ([
             'tarikh_pemeriksaan'=>'2021-07-01',
-            'jenis_ppk'=>'Alat pemadam api',
+            'jenis_ppk'=>'alat pemadam api',
             'no_siri'=>'JPBM/KL/TDI: 700-1/2/4/TDI/4/2021',
             'kesalahan'=>'rosak',
             'aras'=>'aras 7',

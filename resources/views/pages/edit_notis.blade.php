@@ -115,15 +115,15 @@
                                         <option @if ($notis->jenis_ppk == 'Pam Jokey') selected @endif value='Pam Jokey'>Pam Jokey</option>
                                         <option @if ($notis->jenis_ppk == 'Pam Duty') selected @endif value='Pam Duty'>Pam Duty</option>
                                         <option @if ($notis->jenis_ppk == 'Pam Standby') selected @endif value='Pam Standby' >Pam Standby</option>
-                                        <option @if ($notis->jenis_ppk == 'Pintu api') selected @endif value='Pintu api'>Pintu Api</option>
-                                        <option @if ($notis->jenis_ppk == 'Alat pemadam api') selected @endif value='Alat pemadam api'>Alat Pemadam Api</option>
-                                        <option @if ($notis->jenis_ppk == 'Lampu kecemasan') selected @endif value='Lampu kecemasan'>Lampu Kecemasan</option>
-                                        <option @if ($notis->jenis_ppk == 'Sistem penggera kebakaran utama') selected @endif value='Sistem penggera kebakaran utama'>Sistem Penggera Kebakaran Utama</option>
-                                        <option @if ($notis->jenis_ppk == 'Tanda tempat kecemasan') selected @endif value='Tanda tempat kecemasan'>Tanda Tempat Kecemasan</option>
-                                        <option @if ($notis->jenis_ppk == 'Panel penggera kebakaran') selected @endif value='Panel penggera kebakaran'>Panel Penggera Kebakaran</option>
-                                        <option @if ($notis->jenis_ppk == 'Pili bomba') selected @endif value='Pili bomba'>Pili Bomba</option>
-                                        <option @if ($notis->jenis_ppk == 'Tangga') selected @endif value='Tangga'>Tangga</option>
-                                        <option @if ($notis->jenis_ppk == 'Pemegang injap sistem gelung hos') selected @endif value='Pemegang injap sistem gelung hos'>Pemegang Injap Sistem Gelung Hos</option>
+                                        <option @if ($notis->jenis_ppk == 'pintu api') selected @endif value='pintu api'>Pintu Api</option>
+                                        <option @if ($notis->jenis_ppk == 'alat pemadam api') selected @endif value='alat pemadam api'>Alat Pemadam Api</option>
+                                        <option @if ($notis->jenis_ppk == 'lampu kecemasan') selected @endif value='lampu kecemasan'>Lampu Kecemasan</option>
+                                        <option @if ($notis->jenis_ppk == 'sistem penggera kebakaran utama') selected @endif value='sistem penggera kebakaran utama'>Sistem Penggera Kebakaran Utama</option>
+                                        <option @if ($notis->jenis_ppk == 'tanda tempat kecemasan') selected @endif value='tanda tempat kecemasan'>Tanda Tempat Kecemasan</option>
+                                        <option @if ($notis->jenis_ppk == 'panel penggera kebakaran') selected @endif value='panel penggera kebakaran'>Panel Penggera Kebakaran</option>
+                                        <option @if ($notis->jenis_ppk == 'pili bomba') selected @endif value='pili bomba'>Pili Bomba</option>
+                                        <option @if ($notis->jenis_ppk == 'tangga') selected @endif value='tangga'>Tangga</option>
+                                        <option @if ($notis->jenis_ppk == 'pemegang injap sistem gelung hos') selected @endif value='pemegang injap sistem gelung hos'>Pemegang Injap Sistem Gelung Hos</option>
                                     </select>
 
                                     <label>KESALAHAN</label>
@@ -160,7 +160,7 @@
                                         <option @if ($notis->lokasi == 'Lain') selected @endif value="lain">LAIN-LAIN</option>
                                     </select> --}}
                                     
-                                    <label>PEMBETULAN</label>{{$notis->pembetulan}}
+                                    <label>PEMBETULAN</label>
                                     <select class="form-control mb-3" name="pembetulan">
                                         <option @if ($notis->pembetulan == 'mengadakan') selected @endif value='mengadakan'>Mengadakan</option>
                                         <option  @if ($notis->pembetulan == 'membaik pulih') selected @endif value='membaik pulih'>Membaik pulih</option>

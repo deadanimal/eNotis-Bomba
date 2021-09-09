@@ -105,12 +105,13 @@
                                         @endforeach 
                                     </select>
 
-                                    <label>NO. SIRI RUJUKAN</label> 
+                                    <label>NO. SIRI RUJUKAN</label>  
                                     <input type="text" name="no_siri" value="{{$notis->no_siri}}"  class="multisteps-form__input form-control mb-3" disabled>
                                     
 
                                     <label>JENIS PPK  </label>
-                                    <select class="multisteps-form__input form-control mb-3" name="jenis_ppk" disabled>
+                                    <input type="text" name="jenis_ppk" value="{{$notis->jenis_ppk}}" class="multisteps-form__input form-control mb-3" disabled >
+                                    {{-- <select class="multisteps-form__input form-control mb-3" name="jenis_ppk" disabled> 
                                         <option @if ($notis->jenis_ppk == 'Pam Jokey') selected @endif value='Pam Jokey'>Pam Jokey</option>
                                         <option @if ($notis->jenis_ppk == 'Pam Duty') selected @endif value='Pam Duty'>Pam Duty</option>
                                         <option @if ($notis->jenis_ppk == 'Pam Standby') selected @endif value='Pam Standby' >Pam Standby</option>
@@ -122,7 +123,7 @@
                                         <option @if ($notis->jenis_ppk == 'Tanda tempat kecemasan') selected @endif value='Tanda tempat kecemasan'>Tanda Tempat Kecemasan</option>
                                         <option @if ($notis->jenis_ppk == 'Panel penggera kebakaran') selected @endif value='Panel penggera kebakaran'>Panel Penggera Kebakaran</option>
                                         <option @if ($notis->jenis_ppk == 'Pili bomba') selected @endif value='Pili bomba'>Pili Bomba</option>
-                                        <option @if ($notis->jenis_ppk == 'Pemegang injap sistem gelung hos') selected @endif value='Pemegang injap sistem gelung hos'>Pemegang Injap Sistem Gelung Hos</option>
+                                        <option @if ($notis->jenis_ppk == 'Pemegang injap sistem gelung hos') selected @endif value='Pemegang injap sistem gelung hos'>Pemegang Injap Sistem Gelung Hos</option> --}}
 
                                     </select>
 
