@@ -75,7 +75,7 @@
         </div>
     </nav>
     <!-- End Navbar -->
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    {{-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
               <script type="text/javascript">
                 $(function() {
               $("#lokasi").change(function() {
@@ -86,7 +86,7 @@
                   }
                     });
          });
-      </script>
+      </script> --}}
     {{-- <script>
         function lokasi_lain()
         {
@@ -101,6 +101,7 @@
             }
         }
     </script>    --}}
+
     <div class="container-fluid py-4">
         <div class="row">
             <div class="col-12 text-center">
@@ -185,7 +186,7 @@
                                         <div class="row mt-3">
                                             <div class="col-12 col-sm-8 mt-4 mt-sm-0 text-start">
                                                 <label>JENIS PPK</label>
-                                                <select class="multisteps-form__input form-control mb-3" name="jenis_ppk">
+                                                <select class="multisteps-form__input form-control mb-3" name="jenis_ppk" id="jenis_ppk">
                                                     <option hidden selected>Sila Pilih</option>
                                                         <option value="Pam Jokey">Pam Jokey</option>
                                                         <option value="Pam Duty">Pam Duty</option>
@@ -195,7 +196,7 @@
                                                     <option value="pintu api">Pintu Api</option>
                                                     <option value="alat pemadam api">Alat Pemadam Api</option>
                                                     <option value="lampu kecemasan">Lampu Kecemasan</option>
-                                                    <option value="tanda tempat kecemasan">Tanda Tempat Kecemasan</option>
+                                                    <option value="tanda tempat keluar kecemasan">Tanda Tempat Keluar Kecemasan</option>
                                                     <option value="tangga">Tangga</option>
                                                     <option value="pemegang injap sistem gelung hos">Pemegang Injap Sistem Gelung Hos</option>
                                                     <option value="panel penggera kebakaran">Panel Penggera Kebakaran</option>
@@ -209,6 +210,7 @@
                                                     <option value="tidak diselenggara">Tidak Diselenggara</option>
                                                     <option value="tamat tempoh dan tidak diselenggara">Tamat tempoh dan tidak diselenggara</option>
                                                     <option value="rosak">Rosak</option>
+                                                    <option value="terdapat halangan di dalam ruangan kepungan tangga">Terdapat halangan</option>
                                                     <!-- <option value="5">5</option> -->
                                                 </select>
                                                 <label>ARAS/TINGKAT</label>
@@ -304,6 +306,7 @@
                 </div>
             </div>
         </div>
+        
         {{-- <script>
 //             function lokasi_lain(){
 //                 var lokasi = document.getElementById('lokasi');
@@ -314,8 +317,6 @@
 //                     }
 //                     else {
 //                     document.getElementById(lain).style.display.none();
-//                         //display
-//                        // <input type="text" name="lokasi"
 //                     }
 //             }
 
@@ -323,7 +324,7 @@
             
 // </script> --}}
 
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+{{-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
             <script type="text/javascript">
                  $(function() {
                       $("#aras").change(function() {
@@ -335,7 +336,75 @@
                                }
                       });
             });
-     </script>
+     </script> --}}
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+    $(tujuan).ready(function(){
+        var ppk = $("#jenis_ppk").val();
+        var tujuan;
+        
+        $("#jenis_ppk").click(function(){
+            
+            if($(this).val()=="pintu api"){
+                tujuan="MEMASTIKAN PINTU API SENTIASA BERADA DALAM KEADAAN BAIK DAN HENDAKLAH DITUTUP PADA SETIAP MASA";
+            }
+
+            if($(this).val()=="alat pemadam api"){
+                tujuan="MEMASTIKAN ALAT PEMADAM API MUDAH ALIH DISEDIAKAN MENGIKUT PIAWAIAN MALAYSIA 1539, DAN SENTIASA BERADA DALAM KEADAAN BAIK"; 
+            }
+
+            if($(this).val()=="lampu kecemasan"){
+                tujuan="MEMASTIKAN LAMPU KECEMASAN SENTIASA BERADA DALAM KEADAAN BAIK DAN MEMATUHI PIAWAIAN MALAYSIA (MS) 619";
+            }
+
+            if($(this).val()=="tanda tempat keluar kecemasan"){
+                tujuan="MEMASTIKAN TANDA TEMPAR KELUAR KECEMASAN BERFUNGSI DAN BERADA DALAM KEADAAN BAIK SETIAP MASA";
+            }
+
+            if($(this).val()=="pemegang injap sistem gegelung hos"){
+                tujuan="MEMASTIKAN SISTEM GELUNG HOS SENTIASA BERADA DALAM KEADAAN BAIK DAN BOLEH DIGUNAKAN PADA BILA-BILA MASA";
+            }
+
+            if($(this).val()=="tangga"){
+                tujuan="MEMASTIKAN TIADA HALANGAN PADA TANGGA JALAN KELUAR UNTUK MENCEGAH KEMASUKAN ASAP BAGI TUJUAN PELEPASAN DIRI DAN SELAMAT DILALUI SEKIRANYA BERLAKU KEBAKARAN";
+            }
+
+            if($(this).val()=="panel penggera kebakaran"){
+                tujuan="MEMASTIKAN PANEL PENGGERA KEBAKARAN BERFUNGSI DAN SENTIASA BERADA DALAM KEADAAN BAIK";
+            }
+
+            if($(this).val()=="sistem penggera kebakaran utama"){
+                tujuan="MEMASTIKAN SISTEM PENGGERA KEBAKARAN UTAMA BERFUNGSI DAN SENTIASA BERADA DALAM KEADAAN BAIK";
+            }
+
+            if($(this).val()=="pili bomba"){
+                tujuan="MEMASTIKAN PILI BOMBA PREMIS SENTIASA BERADA DALAM KEADAAN BAIK DAN BOLEH DIGUNAKAN PADA BILA-BILA MASA";
+            }
+
+            if($(this).val()=="Pam Standby"){
+                tujuan="MEMASTIKAN PAM STANDBY PREMIS SENTIASA BERADA DALAM KEADAAN BAIK DAN BOLEH DIGUNAKAN PADA BILA-BILA MASA";
+            }
+
+            if($(this).val()=="Pam Duty"){
+                tujuan="MEMASTIKAN PAM DUTY PREMIS SENTIASA BERADA DALAM KEADAAN BAIK DAN BOLEH DIGUNAKAN PADA BILA-BILA MASA";
+
+            }
+
+            if($(this).val()="Pam Jokey"){
+                tujuan="MEMASTIKAN PAM JOKEY PREMIS SENTIASA BERADA DALAM KEADAAN BAIK DAN BOLEH DIGUNAKAN PADA BILA-BILA MASA";
+            }
+
+            // Send the input data to the server using get
+            $.get("/examples/php/create-table.php", {number: tujuan} , function(tujuan){
+
+            // Display the returned data in browser
+            $("#tujuan").html(data);
+
+            });
+        });
+    });
+    </script>
 
 
               

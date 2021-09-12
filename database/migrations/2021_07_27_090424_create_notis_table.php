@@ -34,6 +34,7 @@ class CreateNotisTable extends Migration
             $table->String('tempoh')->nullable();
             $table->String('img_notis')->nullable();//img uploaded
             $table->String('status')->nullable();
+            $table->String('tujuan')->nullable();
             $table->foreignId('id_premis')->nullable();
 
             $table->timestamps();

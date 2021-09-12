@@ -15,7 +15,7 @@ class NotisController extends Controller
 {
     public function index()
     {
-        $notis = Notis::where('status','Siap')->get();
+        $notis = Notis::where('status', 'Siap')->get();
         $premis = Premis::all();
         return view('pages.statusnotis', [
             'notis' => $notis, 'premis'=>$premis
@@ -33,7 +33,6 @@ class NotisController extends Controller
 
     public function store(Request $request)
     {
-    
         $request->validate([
         'tarikh_pemeriksaan' => 'nullable',
         'no_siri' => 'nullable',
@@ -46,7 +45,6 @@ class NotisController extends Controller
         'img_notis'=>'nullable',
         'aras'=>'nullable'
 
-
         ]);
 
         // concat inputs
@@ -54,15 +52,16 @@ class NotisController extends Controller
         $aras_notis = 'aras '.$request->aras;
 
         //To Upload image into DB
-        $notisa=$request->file('img_notis')->store('notis_img'); 
+        $notisa=$request->file('img_notis')->store('notis_img');
 
         $notis = new Notis();
         $notis->tarikh_pemeriksaan=$request->tarikh_pemeriksaan;
         $notis->no_siri=$combined;
         $notis->jenis_ppk=$request->jenis_ppk;
+        $notis->tujuan=$request->tujuan;
         $notis->kesalahan=$request->kesalahan;
         $notis->aras=$aras_notis;
-       // $notis->aras=$request->aras;
+        // $notis->aras=$request->aras;
         $notis->lokasi=$request->lokasi;
         $notis->pembetulan=$request->pembetulan;
         $notis->seksyen=$request->seksyen;
@@ -70,6 +69,7 @@ class NotisController extends Controller
         $notis->img_notis=$notisa;
         $notis->status="Siap";
         $notis->id_premis=$request->id_premis;
+        
         
 
         $notis->save();
@@ -87,9 +87,8 @@ class NotisController extends Controller
     {
         $notis= Notis::find($id);
         $premis=Premis::where('id', $notis->id_premis)->get();
-        return view('pages.edit_notis',[
+        return view('pages.edit_notis', [
             'notis'=>$notis, 'premis'=>$premis]);
-        
     }
 
     public function update($id, Request $request)
@@ -116,24 +115,23 @@ class NotisController extends Controller
         $notis->status=$request->status;
         
         // $notis->img_notis=$request->img_notis;
-         if ($request->hasFile('img_notis')){
+        if ($request->hasFile('img_notis')) {
             $notisa=$request->file('img_notis')->store('notis_img');
             $notis->img_notis=$notisa;
-         }
+        }
 
         $notis->save();
 
         return redirect('/notis');
-}
+    }
 
     public function papar_notis($id)
     {
         $notis= Notis::find($id);
         $premis=Premis::where('id', $notis->id_premis)->get();
-        return view('pages.statusnotisborang',[
+        return view('pages.statusnotisborang', [
             'notis'=>$notis, 'premis'=>$premis
         ]);
-        
     }
 
     
@@ -142,8 +140,10 @@ class NotisController extends Controller
     {
         //
     }
-    public function status_siap(){
-        $notis = Notis::where('status','Hantar')->get();
+
+    public function status_siap()
+    {
+        $notis = Notis::where('status', 'Hantar')->get();
         $premis = Premis::all();
         return view('pages.statusnotishantar', [
             'notis' => $notis, 'premis'=>$premis
@@ -151,17 +151,101 @@ class NotisController extends Controller
     }
 
     
-     public function jadual_minggu(){
-         $notis = Notis::where('status', 'Hantar')->get();
-         return view('pages.jadualminggu', [
+    public function jadual_minggu()
+    {
+        $notis = Notis::where('status', 'Hantar')->get();
+        return view('pages.jadualminggu', [
                 'notis' => $notis
             ]);
-     }
+    }
 
-     public function cetaknotis($id){
+
+
+    public function cetaknotis($id)
+    {
+
         // dd($id);
         $notis= Notis::find($id);
         $premis=Premis::where('id', $notis->id_premis)->get();
+
+        if ($notis->jenis_ppk == 'pintu api') {
+
+            if ($notis->kesalahan == 'tiada') {
+                $notis->tujuan="Memastikan pintu api sentiasa berada dalam keadaan baik dan hendaklah ditutup pada setiap masa";
+                $notis->pembetulan="mengadakan pintu api di bahagian {{$notis->lokasi}}";
+                $notis->seksyen="Seksyen 2 Tafsiran Bahaya Kebakaran (C)";
+            }
+
+            if ($notis->kesalahan == 'rosak') {
+                $notis->tujuan='Memastikan pintu api sentiasa berada dalam keadaan baik dan hendaklah ditutup pada setiap masa';
+                $notis->seksyen='Seksyen 2 Tafsiran Bahaya Kebakaran (D)';
+                $notis->pembetulan="membaik pulih pintu api di $notis->lokasi premis";
+            }
+        } 
+        
+        elseif ($notis->jenis_ppk == 'alat pemadam api') {
+            $notis->tujuan="Memastikan alat pemadam api mudah alih disediakan mengikut piawaian malaysia 1539, dan sentiasa berada dalam keadaan baik";
+            $notis->seksyen='Seksyen 2 Tafsiran Bahaya Kebakaran (C)';
+        
+            if ($notis->kesalahan == 'tiada') {
+                $notis->pembetulan='Mengadakan alat pemadam api di';
+            } elseif ($notis->kesalahan=='tidak diselenggara') {
+                $notis->pembetulan='Membuat penyelenggaraan alat pemadam api mudah alih di ruangan';
+            } elseif ($notis->kesalahan=='tamat tempoh dan tidak diselenggara') {
+                $notis->pembetulan='Membuat penyelenggaraan pemadam api mudah alih di bahagian';
+            } elseif ($notis->kesalahan=='rosak') {
+                $notis->pembetulan='Memastikan alat pemadam api mudah alih disediakan mengikut Piawaian Malaysia 1539, dan sentiasa berada dalam keadaan baik';
+            }
+        } 
+        
+        elseif ($notis->jenis_ppk=='lampu kecemasan') {
+            $notis->tujuan="Memastikan lampu kecemasan sentiasa berada dalam keadaan baik dan mematuhi piawaian Malaysia (MS) 619";
+
+            if ($notis->kesalahan=='tiada') {
+                $notis->seksyen='Seksyen 2 Tafsiran Bahaya Kebakaran (C) yang boleh menyebabkan ancaman kepada keselamatan nyawa jika berlaku kebakaran';
+            } elseif ($notis->kesalahan=='tidak berfungsi') {
+                $notis->seksyen='Seksyen 2 Tafsiran Bahaya Kebakaran (D) yang boleh menyebabkan ancaman kepada keselamatan nyawa jika berlaku kebakaran';
+            }
+        } 
+        
+        elseif ($notis->jenis_ppk=="tanda tempat keluar kecemasan") {
+            $notis->tujuan="Memastikan tanda tempar keluar kecemasan berfungsi dan berada dalam keadaan baik setiap masa";
+
+            if ($notis->kesalahan='tiada') {
+                $notis->pembetulan='Seksyen 2 Tafsiran Bahaya Kebakaran (D) yang boleh menyebabkan ancaman kepada keselamatan nyawa jika berlaku kebakaran';
+            } elseif ($notis->jenis_ppk=="pemegang injap sistem gegelung hos") {
+                $notis->tujuan="Memastikan sistem gelung hos sentiasa berada dalam keadaan baik dan boleh digunakan pada bila-bila masa";
+            }
+        } 
+        
+        elseif ($notis->jenis_ppk=="tangga") {
+            $notis->tujuan="Memastikan tiada halangan pada tangga jalan keluar untuk mencegah kemasukan asap bagi tujuanpelepasan diri dan selamat dilalui sekiranya berlaku kebakaran";
+        } 
+
+        elseif ($notis->jenis_ppk=="panel penggera kebakaran") {
+            $notis->tujuan="Memastikan panel penggera kebakaran berfungsi dan sentiasa berada dalam keadaan baik";
+        } 
+
+        elseif ($notis->jenis_ppk=="sistem penggera kebakaran utama") {
+            $notis->tujuan="Memastikan sistem penggera kebakaran utama berfungsi dan sentiasa berada dalam keadaan baik";
+        } 
+
+        elseif ($notis->jenis_ppk=="pili bomba") {
+            $notis->tujuan="Memastikan pili bomba premis sentiasa berada dalam keadaan baik dan boleh digunakan pada bila-bila masa";
+        } 
+
+        elseif ($notis->jenis_ppk=="Pam Standby") {
+            $notis->tujuan="Memastikan Pam Standby premis sentiasa berada dalam keadaan baik dan boleh digunakan pada bila-bila masa";
+        } 
+
+        elseif ($notis->jenis_ppk=="Pam Duty") {
+            $notis->tujuan="Memastikan Pam Duty premis sentiasa berada dalam keadaan baik dan boleh digunakan pada bila-bila masa";
+        } 
+
+        elseif ($notis->jenis_ppk="Pam Jokey") {
+            $notis->tujuan="Memastikan Pam Jokey premis sentiasa berada dalam keadaan baik dan boleh digunakan pada bila-bila masa";
+        }
+
 
         //dd($notis->tarikh_pemeriksaan);
         setlocale(LC_ALL, 'ms_MY');
@@ -176,9 +260,5 @@ class NotisController extends Controller
             'notis' => $notis, 'premis'=>$premis, 'tarikh_pemeriksaan'=> $tarikh_pemeriksaan
         ]);
         return $pdf->download($notis->no_siri.'.pdf');
-
     }
-
-
-    
 }

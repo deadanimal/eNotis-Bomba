@@ -128,13 +128,14 @@
                                     </select>
 
                                     <label>KESALAHAN</label>
-                                    <select name="kesalahan" class="form-control mb-3" disabled>
+                                    <input type="text" name="kesalahan" value="{{$notis->kesalahan}}" class="form-control mb-3" disabled>
+                                    {{-- <select name="kesalahan" class="form-control mb-3" disabled>
                                         <option @if ($notis->kesalahan == 'tiada') selected @endif value='tiada'>Tiada</option>
                                         <option @if ($notis->kesalahan == 'tidak diselenggara') selected @endif value="tidak diselenggara">Tidak Diselenggara
                                         </option>
                                         <option @if ($notis->kesalahan == 'tamat tempoh dan tidak diselenggara') selected @endif value="tamat tempoh dan tidak diselenggara" >Tamat Tempoh dan Tidak Diselenggara</option>
                                         <option @if ($notis->kesalahan == 'rosak') selected @endif value="rosak">Rosak</option>
-                                    </select>
+                                    </select> --}}
 
                                     <label>ARAS/TINGKAT</label>
                                     <input type="text" name="aras" value="{{$notis->aras}}" class="form-control mb-3" disabled>
@@ -161,16 +162,18 @@
                                     </select> --}}
                                     
                                     <label>PEMBETULAN</label>
-                                    <select class="form-control mb-3" name="pembetulan" disabled>
+                                    <input type="text" name="pembetulan" value="{{$notis->pembetulan}}" class="form-control mb-3" disabled>
+                                    {{-- <select class="form-control mb-3" name="pembetulan" disabled>
                                         <option @if ($notis->pembetulan == 'mengadakan') selected @endif value="mengadakan">Mengadakan</option>
                                         <option  @if ($notis->pembetulan == 'membaik pulih') selected @endif value="membaik pulih">Membaik pulih</option>
                                         <option @if ($notis->pembetulan == 'membuat penyelengaraan') selected @endif value="membuat penyelengaraan">Membuat
                                             penyelengaraan</option>
                                         <option @if ($notis->pembetulan== 'membuka halangan') selected @endif value="membuka halangan">Membuka halangan</option>
-                                    </select>
+                                    </select> --}}
 
                                     <label>Seksyen</label>
-                                    <select class="form-control mb-3" name="seksyen" disabled>
+                                    <input type="text" name="seksyen" value="{{$notis->seksyen}}" class="form-control mb-3" disabled>
+                                    {{-- <select class="form-control mb-3" name="seksyen" disabled>
                                         <option @if ($notis->seksyen == 'Seksyen 2(A)') selected @endif value='Seksyen 2(A)'>Seksyen 2(A)</option>
                                         <option @if ($notis->seksyen == 'Seksyen 2(B)') selected @endif value='Seksyen 2(B)'>Seksyen 2(B)</option>
                                         <option @if ($notis->seksyen == 'Seksyen 2(C)') selected @endif value='Seksyen 2(C)'>Seksyen 2(C)</option>
@@ -178,10 +181,11 @@
                                         <option @if ($notis->seksyen == 'Seksyen 2(E)') selected @endif value='Seksyen 2(E)'>Seksyen 2(E)</option>
                                         <option @if ($notis->seksyen == 'Seksyen 2(F)') selected @endif value='Seksyen 2(F)'>Seksyen 2(F)</option>
 
-                                    </select>
+                                    </select> --}}
 
                                     <label>TEMPOH</label>
-                                    <select class="form-control mb-3" name="tempoh" disabled>
+                                    <input type="text" name="tempoh" value="{{$notis->tempoh}}" class="form-control mb-3" disabled>
+                                    {{-- <select class="form-control mb-3" name="tempoh" disabled>
                                         <option @if ($notis->tempoh == '30 hari') selected @endif value="30 hari">30 Hari</option>
                                         <option @if ($notis->tempoh == '60 hari') selected @endif value="60 hari">60 Hari</option>
                                         <option @if ($notis->tempoh == '90 hari') selected @endif value="90 hari">90 Hari</option>
@@ -189,7 +193,7 @@
                                         <option @if ($notis->tempoh == '150 hari') selected @endif value="150 hari">150 Hari</option>
                                         <option @if ($notis->tempoh == '180 hari') selected @endif value="180 hari">180 Hari</option>
                                         <option @if ($notis->tempoh == '360 hari') selected @endif value="360 hari">360 Hari</option>
-                                    </select>
+                                    </select> --}}
 
                                     <label>STATUS</label>
                                     <select class="form-control mb-3" name="status"disabled>

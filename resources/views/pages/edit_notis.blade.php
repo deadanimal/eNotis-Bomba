@@ -134,6 +134,7 @@
                                         </option>
                                         <option @if ($notis->kesalahan == 'tamat tempoh dan tidak diselenggara') selected @endif value='tamat tempoh dan tidak diselenggara'>Tamat tempoh dan tidak diselenggara</option>
                                         <option @if ($notis->kesalahan == 'rosak') selected @endif value='rosak'>Rosak</option>
+                                        <option @if ($notis->kesalahan == 'terdapat halangan di dalam ruangan kepungan tangga') selected @endif value='terdapat halangan di dalam ruangan kepungan tangga'>Terdapat halangan</option> 
                                     </select>
 
                                     <label>ARAS/TINGKAT</label>
