@@ -21,11 +21,11 @@
         }
 
         * {
-            font: 11pt "Times New Roman";
+            font: 12pt "Times New Roman";
             line-height: 1.5;
         }
 
-        .center {
+        center {
         text-align: center;
         font: "Times New Roman";
         font-size: 11pt;
@@ -46,6 +46,7 @@
     
         .right{
             text-align: right;
+            font-size: 11pt;
         }
 
         footer {
@@ -53,6 +54,12 @@
             bottom: 0;
             width: 100%;
             font: 8pt "Times New Roman";
+            line-height: 1.25;
+        }
+
+        b{
+            font: 11pt "Times New Roman";
+            text-align: center;
         }
 
     </style>
@@ -63,11 +70,11 @@
 
     <p class="right">{{$notis->no_siri}}
     <br>TDI &nbsp; &nbsp;/2021</p>
-    <h2 class="center">JADUAL</h2>
-    <h3 class="center">AKTA PERKHIDMATAN BOMBA 1988</h3>
-    <h3 class="center">BORANG </h3>
-    <h3 class="center"> (Seksyen 8(1))</h3>
-    <h3 class="center"> MENGHAPUSKAN BAHAYA KEBAKARAN</h3>
+    <br><center><b>JADUAL</b>
+    <br><b>AKTA PERKHIDMATAN BOMBA 1988</b>
+    <br><b>BORANG A</b>
+    <br>(Seksyen 8(1))
+    <br>MENGHAPUSKAN BAHAYA KEBAKARAN</center>
     
     <br><br>
     <div class="dotted">Kepada: Pengurus</div>
@@ -87,11 +94,9 @@
     <p> SILA AMBIL PERHATIAN BAHAWA Jika tuan tidak memenuhi apa-apa kehendak notis dalam masa yang dinyatakan, tuan adalah melakukan suatu kesalahan yang mana apabila disabitkan tuan boleh didenda tidak melebihi lima ribu ringgit atau dipenjarakan selama tempoh tidak melebihi tiga tahun atau kedua-duanya dan didenda selanjutnya sebanyak satu ratus ringgit bagi setiap hari yang kesalahan itu berterusan selepas sabitan. </p>
 
     <p>Bertarikh pada ..................haribulan................... 2021</p>
-      
     <br>
     <h4 class="right">.......................................................................</h4>
     <h4 class="right">(Ketua Pengarah Perkhidmatan Bomba)</h4>
-    <br><br>
     <hr>
     <footer>
     + atau mana-mana Pegawai Bomba yang telah diwakilkan kuasa kepadanya oleh Ketua Pengarah. 

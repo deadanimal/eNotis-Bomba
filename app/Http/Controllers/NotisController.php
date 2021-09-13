@@ -253,7 +253,7 @@ class NotisController extends Controller
 
         elseif ($notis->jenis_ppk=="sistem penggera kebakaran utama") {
             $notis->tujuan="Memastikan sistem penggera kebakaran utama berfungsi dan sentiasa berada dalam keadaan baik";
-            $notis->seksyen="Seksyen 2 Tafsiran Bahaya Kebakaran (D) yang menyebabkan yang boleh menyebabkan amaran awal tidak dapat disampaikan";
+            $notis->seksyen="Seksyen 2 Tafsiran Bahaya Kebakaran (D) yang boleh menyebabkan amaran awal tidak dapat disampaikan";
 
         } 
 
