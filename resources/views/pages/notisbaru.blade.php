@@ -203,20 +203,22 @@
                                                     <option value="sistem penggera kebakaran utama">Sistem Penggera Kebakaran Utama</option>
                                                     <option value="pili bomba">Pili Bomba</option>
                                                 </select>
+
                                                 <label>KESALAHAN</label>
                                                 <select class="multisteps-form__input form-control mb-3" name="kesalahan">
                                                     <option hidden selected>Sila Pilih</option>
                                                     <option value="tiada">Tiada</option>
                                                     <option value="tidak diselenggara">Tidak Diselenggara</option>
+                                                    <option value="tidak berfungsi">Tidak Berfungsi</option>
                                                     <option value="tamat tempoh dan tidak diselenggara">Tamat tempoh dan tidak diselenggara</option>
                                                     <option value="rosak">Rosak</option>
-                                                    <option value="terdapat halangan di dalam ruangan kepungan tangga">Terdapat halangan</option>
+                                                    <option value="mempunyai halangan">Mempunyai halangan</option>
                                                     <!-- <option value="5">5</option> -->
                                                 </select>
                                                 <label>ARAS/TINGKAT</label>
                                                 <div class="input-group">
                                                     <span class="input-group-text">Aras</span>
-                                                    <input type="number" aria-label="aras" class="multisteps-form__input form-control" name="aras">
+                                                    <input type="number" aria-label="aras" class="multisteps-form__input form-control" name="aras" placeholder="Sila Nyatakan Aras">
                                                 </div>
                                                 
 

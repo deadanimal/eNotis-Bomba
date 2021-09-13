@@ -119,7 +119,7 @@
                                         <option @if ($notis->jenis_ppk == 'alat pemadam api') selected @endif value='alat pemadam api'>Alat Pemadam Api</option>
                                         <option @if ($notis->jenis_ppk == 'lampu kecemasan') selected @endif value='lampu kecemasan'>Lampu Kecemasan</option>
                                         <option @if ($notis->jenis_ppk == 'sistem penggera kebakaran utama') selected @endif value='sistem penggera kebakaran utama'>Sistem Penggera Kebakaran Utama</option>
-                                        <option @if ($notis->jenis_ppk == 'tanda tempat kecemasan') selected @endif value='tanda tempat kecemasan'>Tanda Tempat Kecemasan</option>
+                                        <option @if ($notis->jenis_ppk == 'tanda tempat keluar kecemasan') selected @endif value='tanda tempat keluar kecemasan'>Tanda Tempat Keluar Kecemasan</option>
                                         <option @if ($notis->jenis_ppk == 'panel penggera kebakaran') selected @endif value='panel penggera kebakaran'>Panel Penggera Kebakaran</option>
                                         <option @if ($notis->jenis_ppk == 'pili bomba') selected @endif value='pili bomba'>Pili Bomba</option>
                                         <option @if ($notis->jenis_ppk == 'tangga') selected @endif value='tangga'>Tangga</option>
@@ -132,9 +132,10 @@
                                         <option @if ($notis->kesalahan == 'tiada') selected @endif value='tiada'>Tiada</option>
                                         <option @if ($notis->kesalahan == 'tidak diselenggara') selected @endif value='tidak diselenggara'>Tidak diselenggara
                                         </option>
+                                        <option @if ($notis->kesalahan == 'tidak berfungsi') selected @endif value='tidak befungsi'>Tidak Berfungsi</option>
                                         <option @if ($notis->kesalahan == 'tamat tempoh dan tidak diselenggara') selected @endif value='tamat tempoh dan tidak diselenggara'>Tamat tempoh dan tidak diselenggara</option>
                                         <option @if ($notis->kesalahan == 'rosak') selected @endif value='rosak'>Rosak</option>
-                                        <option @if ($notis->kesalahan == 'terdapat halangan di dalam ruangan kepungan tangga') selected @endif value='terdapat halangan di dalam ruangan kepungan tangga'>Terdapat halangan</option> 
+                                        <option @if ($notis->kesalahan == 'mempunyai halangan') selected @endif value='mempunyai halangan'>Mempunyai halangan</option> 
                                     </select>
 
                                     <label>ARAS/TINGKAT</label>

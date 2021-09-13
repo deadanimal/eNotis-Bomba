@@ -185,16 +185,24 @@ class NotisController extends Controller
         
         elseif ($notis->jenis_ppk == 'alat pemadam api') {
             $notis->tujuan="Memastikan alat pemadam api mudah alih disediakan mengikut piawaian malaysia 1539, dan sentiasa berada dalam keadaan baik";
-            $notis->seksyen='Seksyen 2 Tafsiran Bahaya Kebakaran (C)';
         
             if ($notis->kesalahan == 'tiada') {
                 $notis->pembetulan='Mengadakan alat pemadam api di';
-            } elseif ($notis->kesalahan=='tidak diselenggara') {
+                $notis->seksyen="Seksyen 2 Tafsiran Bahaya Kebakaran (C) yang menyebabkan tindakan pemadaman kebakaran di peringkat awal tidak dapat dibuat serta merta jika berlaku kebakaran";
+            } 
+            elseif ($notis->kesalahan=='tidak diselenggara') {
                 $notis->pembetulan='Membuat penyelenggaraan alat pemadam api mudah alih di ruangan';
-            } elseif ($notis->kesalahan=='tamat tempoh dan tidak diselenggara') {
+                $notis->seksyen="Seksyen 2 Tafsiran Bahaya Kebakaran (D) yang menyebabkan tindakan pemadaman kebakaran di peringkat awal tidak dapat dibuat serta merta jika berlaku kebakaran";
+            } 
+            
+            elseif ($notis->kesalahan=='tamat tempoh dan tidak diselenggara') {
                 $notis->pembetulan='Membuat penyelenggaraan pemadam api mudah alih di bahagian';
-            } elseif ($notis->kesalahan=='rosak') {
+                $notis->seksyen="Seksyen 2 Tafsiran Bahaya Kebakaran (D) yang menyebabkan tindakan pemadaman kebakaran di peringkat awal tidak dapat dibuat serta merta jika berlaku kebakaran";
+            } 
+            
+            elseif ($notis->kesalahan=='rosak') {
                 $notis->pembetulan='Memastikan alat pemadam api mudah alih disediakan mengikut Piawaian Malaysia 1539, dan sentiasa berada dalam keadaan baik';
+                $notis->seksyen = "Seksyen 2 Tafsiran Bahaya Kebakaran (D) yang menyebabkan tindakan pemadaman kebakaran di peringkat awal tidak dapat dibuat serta merta jika berlaku kebakaran";
             }
         } 
         
@@ -202,47 +210,73 @@ class NotisController extends Controller
             $notis->tujuan="Memastikan lampu kecemasan sentiasa berada dalam keadaan baik dan mematuhi piawaian Malaysia (MS) 619";
 
             if ($notis->kesalahan=='tiada') {
+                $notis->pembetulan="mengadakan lampu kecemasan di $notis->aras bahagian $notis->lokasi";
                 $notis->seksyen='Seksyen 2 Tafsiran Bahaya Kebakaran (C) yang boleh menyebabkan ancaman kepada keselamatan nyawa jika berlaku kebakaran';
+
             } elseif ($notis->kesalahan=='tidak berfungsi') {
                 $notis->seksyen='Seksyen 2 Tafsiran Bahaya Kebakaran (D) yang boleh menyebabkan ancaman kepada keselamatan nyawa jika berlaku kebakaran';
+                $notis->pembetulan="membaik pulih lampu kecemasan di $notis->aras bahagian $notis->lokasi";
             }
         } 
         
         elseif ($notis->jenis_ppk=="tanda tempat keluar kecemasan") {
-            $notis->tujuan="Memastikan tanda tempar keluar kecemasan berfungsi dan berada dalam keadaan baik setiap masa";
+            $notis->tujuan="Memastikan tanda tempat keluar kecemasan berfungsi dan berada dalam keadaan baik setiap masa";
 
             if ($notis->kesalahan='tiada') {
-                $notis->pembetulan='Seksyen 2 Tafsiran Bahaya Kebakaran (D) yang boleh menyebabkan ancaman kepada keselamatan nyawa jika berlaku kebakaran';
-            } elseif ($notis->jenis_ppk=="pemegang injap sistem gegelung hos") {
-                $notis->tujuan="Memastikan sistem gelung hos sentiasa berada dalam keadaan baik dan boleh digunakan pada bila-bila masa";
+                $notis->pembetulan="mengadakan tanda tempat keluar kecemasan di $notis->aras bahagian $notis->lokasi";
+                $notis->seksyen='Seksyen 2 Tafsiran Bahaya Kebakaran (C) yang boleh menyebabkan ancaman kepada keselamatan nyawa jika berlaku kebakaran';
+
+            } 
+            else if($notis->kesalahan='tidak berfungsi'){
+                $notis->pembetulan="membaik pulih tanda tempat keluar kecemasan di $notis->aras bahagian $notis->lokasi";
+                $notis->seksyen="Seksyen 2 Tafsiran Bahaya Kebakaran (D) yang boleh menyebabkan ancaman kepada keselamatan nyawa";
             }
         } 
+
+        elseif ($notis->jenis_ppk=="pemegang injap sistem gelung hos") {
+                $notis->tujuan="Memastikan sistem gelung hos sentiasa berada dalam keadaan baik dan boleh digunakan pada bila-bila masa";
+                $notis->seksyen="Seksyen 2 Tafsiran Bahaya Kebakaran (D) yang menyebabkan tindakan pemadaman kebakaran di peringkat awal tidak dapat dibuat serta merta jika berlaku kebakaran";
+            
+                
+        }
         
         elseif ($notis->jenis_ppk=="tangga") {
-            $notis->tujuan="Memastikan tiada halangan pada tangga jalan keluar untuk mencegah kemasukan asap bagi tujuanpelepasan diri dan selamat dilalui sekiranya berlaku kebakaran";
+
+            $notis->tujuan="Memastikan tiada halangan pada tangga jalan keluar untuk mencegah kemasukan asap bagi tujuan pelepasan diri dan selamat dilalui sekiranya berlaku kebakaran";
+            $notis->seksyen="Seksyen 2 Tafsiran Bahaya Kebakaran (A) yang menyebabkan ancaman kepada keselamatan nyawa sekiranya berlaku kebakaran";
         } 
 
         elseif ($notis->jenis_ppk=="panel penggera kebakaran") {
             $notis->tujuan="Memastikan panel penggera kebakaran berfungsi dan sentiasa berada dalam keadaan baik";
+            $notis->seksyen="Seksyen 2 Tafsiran Bahaya Kebakaran (D) yang boleh menyebabkan ancaman kepada keselamatan nyawa jika berlaku kebakaran ";
         } 
 
         elseif ($notis->jenis_ppk=="sistem penggera kebakaran utama") {
             $notis->tujuan="Memastikan sistem penggera kebakaran utama berfungsi dan sentiasa berada dalam keadaan baik";
+            $notis->seksyen="Seksyen 2 Tafsiran Bahaya Kebakaran (D) yang menyebabkan yang boleh menyebabkan amaran awal tidak dapat disampaikan";
+
         } 
 
         elseif ($notis->jenis_ppk=="pili bomba") {
+            $notis->seksyen="Seksyen 2 Tafsiran Bahaya Kebakaran (D) yang boleh menyebabkan ancaman kepada keselamatan nyawa jika berlaku kebakaran";
             $notis->tujuan="Memastikan pili bomba premis sentiasa berada dalam keadaan baik dan boleh digunakan pada bila-bila masa";
         } 
 
         elseif ($notis->jenis_ppk=="Pam Standby") {
+            $notis->seksyen="Seksyen 2 Tafsiran Bahaya Kebakaran (D) yang boleh menyebabkan ancaman kepada keselamatan nyawa jika berlaku kebakaran";
             $notis->tujuan="Memastikan Pam Standby premis sentiasa berada dalam keadaan baik dan boleh digunakan pada bila-bila masa";
+            $notis->pembetulan="membaik pulih Pam Standby bagi sistem gelung hos di $notis->aras bahagian $notis->lokasi";
         } 
 
         elseif ($notis->jenis_ppk=="Pam Duty") {
+            $notis->seksyen="Seksyen 2 Tafsiran Bahaya Kebakaran (D) yang boleh menyebabkan ancaman kepada keselamatan nyawa jika berlaku kebakaran";
+            $notis->pembetulan="membaik pulih Pam Duty bagi sistem gelung hos di $notis->aras bahagian $notis->lokasi";
             $notis->tujuan="Memastikan Pam Duty premis sentiasa berada dalam keadaan baik dan boleh digunakan pada bila-bila masa";
         } 
 
         elseif ($notis->jenis_ppk="Pam Jokey") {
+            $notis->seksyen="Seksyen 2 Tafsiran Bahaya Kebakaran (D) yang boleh menyebabkan ancaman kepada keselamatan nyawa jika berlaku kebakaran";
+            $notis->pembetulan="membaik pulih Pam Jokey bagi sistem gelung hos di $notis->aras bahagian $notis->lokasi";
             $notis->tujuan="Memastikan Pam Jokey premis sentiasa berada dalam keadaan baik dan boleh digunakan pada bila-bila masa";
         }
 

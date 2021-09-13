@@ -10,7 +10,7 @@
         u {
         padding-bottom:1.5px;
         text-decoration:none;
-        border-bottom:2px dotted #000;
+        border-bottom:1.5px dotted #000;
         font-weight: bold;
         }
 
@@ -78,9 +78,9 @@
 
     <p>SILA AMBIL PERHATIAN bahawa Ketua Pengarah Perkhidmatan Bomba +, setelah berpuas hati tentang adanya di <div class="dotted">{{$premis->nama_premis}}, {{$premis->alamat}}</div> </p>
 
-    <p>suatu bahaya kebakaran, iaitu <u>{{$notis->jenis_ppk}} di bahagian {{$notis->lokasi}} {{$notis->kesalahan}}, di bawah {{$notis->seksyen}} yang boleh menyebab ancaman kepada keselamatan nyawa dan harta benda jika berlaku kebakaran</u> </p>
+    <p>suatu bahaya kebakaran, iaitu <u>{{$notis->jenis_ppk}} yang {{$notis->kesalahan}} di {{$notis->aras}} bahagian {{$notis->lokasi}} premis, di bawah {{$notis->seksyen}}</u> </p>
 
-    <p>dengan ini, menurut seksyen 8(1) Akta Perkhidmatan Bomba 1988, menghendaki tuan, dalam masa <u>{{$notis->tempoh}}</u>  dari penyampaian notis ini, (1) menghapuskan bahaya kebakaran itu, dan bagi tujuan itu hendaklah<u> {{$notis->pembetulan}} {{$notis->jenis_ppk}} mengikut undang-undang yang telah diperuntukan oleh Jabatan Bomba</u> </p>
+    <p>dengan ini, menurut seksyen 8(1) Akta Perkhidmatan Bomba 1988, menghendaki tuan, dalam masa <u>{{$notis->tempoh}}</u>  dari penyampaian notis ini, (1) menghapuskan bahaya kebakaran itu, dan bagi tujuan itu hendaklah<u> {{$notis->pembetulan}} mengikut undang-undang yang telah diperuntukan oleh Jabatan Bomba</u> </p>
 
     <p>dan (2)<sup>*</sup>melakukan apa jua yang perlu bagi mencegah berulangnya bahaya kebakaran itu, dan bagi tujuan tersebut hendaklah <u>{{$notis->tujuan}}</u> </p>
 
@@ -91,6 +91,7 @@
     <br>
     <h4 class="right">.......................................................................</h4>
     <h4 class="right">(Ketua Pengarah Perkhidmatan Bomba)</h4>
+    <br><br>
     <hr>
     <footer>
     + atau mana-mana Pegawai Bomba yang telah diwakilkan kuasa kepadanya oleh Ketua Pengarah. 

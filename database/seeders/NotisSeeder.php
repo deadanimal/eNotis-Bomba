@@ -15,9 +15,9 @@ class NotisSeeder extends Seeder
     {
         Notis::create ([
             'tarikh_pemeriksaan'=>'2021-08-01',
-            'jenis_ppk'=>'Pam Jokey',
+            'jenis_ppk'=>'sistem penggera kebakaran utama',
             'no_siri'=>'JPBM/KL/TDI: 700-1/2/3/TDI/3/2021',
-            'kesalahan'=>'rosak',
+            'kesalahan'=>'tidak berfungsi',
             'aras'=>'aras 6',
             'lokasi'=>'depan',
             'pembetulan'=>'mengadakan',
@@ -30,9 +30,9 @@ class NotisSeeder extends Seeder
 
         Notis::create ([
             'tarikh_pemeriksaan'=>'2021-07-01',
-            'jenis_ppk'=>'alat pemadam api',
+            'jenis_ppk'=>'Pam Jokey',
             'no_siri'=>'JPBM/KL/TDI: 700-1/2/4/TDI/4/2021',
-            'kesalahan'=>'rosak',
+            'kesalahan'=>'Pam Jokey',
             'aras'=>'aras 7',
             'lokasi'=>'belakang',
             'pembetulan'=>'membaik pulih',
