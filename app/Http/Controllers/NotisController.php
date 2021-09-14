@@ -234,9 +234,11 @@ class NotisController extends Controller
         } 
 
         elseif ($notis->jenis_ppk=="pemegang injap sistem gelung hos") {
-                $notis->tujuan="memastikan sistem gelung hos sentiasa berada dalam keadaan baik dan boleh digunakan pada bila-bila masa";
-                $notis->seksyen="Seksyen 2 Tafsiran Bahaya Kebakaran (D) yang menyebabkan tindakan pemadaman kebakaran di peringkat awal tidak dapat dibuat serta merta jika berlaku kebakaran";
-            
+                if ($notis->kesalahan="tidak berfungsi") {
+                    $notis->pembetulan="membaik pulih pemegang injap sistem gelung hos di bahagian $notis->lokasi premis";
+                    $notis->tujuan="memastikan sistem gelung hos sentiasa berada dalam keadaan baik dan boleh digunakan pada bila-bila masa";
+                    $notis->seksyen="Seksyen 2 Tafsiran Bahaya Kebakaran (D) yang menyebabkan tindakan pemadaman kebakaran di peringkat awal tidak dapat dibuat serta merta jika berlaku kebakaran";
+                }
                 
         }
         
@@ -247,6 +249,7 @@ class NotisController extends Controller
         } 
 
         elseif ($notis->jenis_ppk=="panel penggera kebakaran") {
+            $notis->pembetulan="membaik pulih panel penggera kebakaran di bahagian $notis->lokasi premis";
             $notis->tujuan="memastikan panel penggera kebakaran berfungsi dan sentiasa berada dalam keadaan baik";
             $notis->seksyen="Seksyen 2 Tafsiran Bahaya Kebakaran (D) yang boleh menyebabkan ancaman kepada keselamatan nyawa jika berlaku kebakaran ";
         } 
