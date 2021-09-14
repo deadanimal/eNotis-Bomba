@@ -1,6 +1,11 @@
 <head>
     <style type="text/css">
 
+        .right{
+        text-align: right;
+         font: 10pt "Times New Roman";
+        }
+
         .dotted{
           border-bottom: 1.5px dotted black;
           line-height:5px;
@@ -42,12 +47,6 @@
             text-align: justify;
         }
 
-    
-        .right{
-            text-align: right;
-            font: 11pt "Times New Roman";
-        }
-
         .foot{
             left: 0;
             bottom: 0;
@@ -69,9 +68,10 @@
 
     <p class="right">{{$notis->no_siri}}
     <br>TDI &nbsp; &nbsp;/2021</p>
-    <br><center><b>JADUAL</b>
-    <br><b>AKTA PERKHIDMATAN BOMBA 1988</b>
-    <br><b>BORANG A</b>
+
+    <br><center>JADUAL PERTAMA
+    <br><b>AKTA PERKHIDMATAN BOMBA 1988
+    <br>BORANG A</b>
     <br>(Seksyen 8(1))
     <br>MENGHAPUSKAN BAHAYA KEBAKARAN</center>
     

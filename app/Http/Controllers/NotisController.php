@@ -252,14 +252,20 @@ class NotisController extends Controller
         } 
 
         elseif ($notis->jenis_ppk=="sistem penggera kebakaran utama") {
-            $notis->tujuan="memastikan sistem penggera kebakaran utama berfungsi dan sentiasa berada dalam keadaan baik";
-            $notis->seksyen="Seksyen 2 Tafsiran Bahaya Kebakaran (D) yang boleh menyebabkan amaran awal tidak dapat disampaikan";
+            if ($notis->kesalahan ="tidak berfungsi"){
+                $notis->pembetulan="membaikpulih sistem penggera kebakaran utama di $notis->lokasi";
+                $notis->tujuan="memastikan sistem penggera kebakaran utama berfungsi dan sentiasa berada dalam keadaan baik";
+                $notis->seksyen="Seksyen 2 Tafsiran Bahaya Kebakaran (D) yang boleh menyebabkan amaran awal tidak dapat disampaikan";
+            }
 
         } 
 
         elseif ($notis->jenis_ppk=="pili bomba") {
-            $notis->seksyen="Seksyen 2 Tafsiran Bahaya Kebakaran (D) yang boleh menyebabkan ancaman kepada keselamatan nyawa jika berlaku kebakaran";
-            $notis->tujuan="memastikan pili bomba premis sentiasa berada dalam keadaan baik dan boleh digunakan pada bila-bila masa";
+            if ($notis->kesalahan="tidak berfungsi") {
+                $notis->pembetulan="membaik pulih pili bomba di bahagian $notis->lokasi premis";
+                $notis->seksyen="Seksyen 2 Tafsiran Bahaya Kebakaran (D) yang boleh menyebabkan ancaman kepada keselamatan nyawa jika berlaku kebakaran";
+                $notis->tujuan="memastikan pili bomba premis sentiasa berada dalam keadaan baik dan boleh digunakan pada bila-bila masa";
+            }
         } 
 
         elseif ($notis->jenis_ppk=="Pam Standby") {
