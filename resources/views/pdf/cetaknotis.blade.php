@@ -40,16 +40,15 @@
 
         p{
             text-align: justify;
-            line-height: 1.5;
         }
 
     
         .right{
             text-align: right;
-            font-size: 11pt;
+            font: 11pt "Times New Roman";
         }
 
-        footer {
+        .foot{
             left: 0;
             bottom: 0;
             width: 100%;
@@ -83,24 +82,22 @@
     <br> <div class="dotted">{{$premis->alamat}}</div> 
     @endforeach
 
-    <p>SILA AMBIL PERHATIAN bahawa Ketua Pengarah Perkhidmatan Bomba +, setelah berpuas hati tentang adanya di <div class="dotted">{{$premis->nama_premis}}, {{$premis->alamat}}</div> </p>
+    <p>SILA AMBIL PERHATIAN bahawa Ketua Pengarah Perkhidmatan Bomba +, setelah berpuas hati tentang adanya di <u>{{$premis->nama_premis}}, {{$premis->alamat}}</u> </p>
 
-    <p>suatu bahaya kebakaran, iaitu <u>{{$notis->jenis_ppk}} yang {{$notis->kesalahan}} di {{$notis->aras}} bahagian {{$notis->lokasi}} premis, di bawah {{$notis->seksyen}}</u> </p>
+    <p>suatu bahaya kebakaran, iaitu <u>{{$notis->jenis_ppk}} yang {{$notis->kesalahan}} di {{$notis->aras}} bahagian {{$notis->lokasi}} premis, di bawah {{$notis->seksyen}}</u></p>
 
     <p>dengan ini, menurut seksyen 8(1) Akta Perkhidmatan Bomba 1988, menghendaki tuan, dalam masa <u>{{$notis->tempoh}}</u>  dari penyampaian notis ini, (1) menghapuskan bahaya kebakaran itu, dan bagi tujuan itu hendaklah<u> {{$notis->pembetulan}} mengikut undang-undang yang telah diperuntukan oleh Jabatan Bomba</u> </p>
 
     <p>dan (2)<sup>*</sup>melakukan apa jua yang perlu bagi mencegah berulangnya bahaya kebakaran itu, dan bagi tujuan tersebut hendaklah <u>{{$notis->tujuan}}</u> </p>
 
-    <p> SILA AMBIL PERHATIAN BAHAWA Jika tuan tidak memenuhi apa-apa kehendak notis dalam masa yang dinyatakan, tuan adalah melakukan suatu kesalahan yang mana apabila disabitkan tuan boleh didenda tidak melebihi lima ribu ringgit atau dipenjarakan selama tempoh tidak melebihi tiga tahun atau kedua-duanya dan didenda selanjutnya sebanyak satu ratus ringgit bagi setiap hari yang kesalahan itu berterusan selepas sabitan. </p>
-
-    <p>Bertarikh pada ..................haribulan................... 2021</p>
+    <p> SILA AMBIL PERHATIAN BAHAWA Jika tuan tidak memenuhi apa-apa kehendak notis dalam masa yang dinyatakan, tuan adalah melakukan suatu kesalahan yang mana apabila disabitkan tuan boleh didenda tidak melebihi lima ribu ringgit atau dipenjarakan selama tempoh tidak melebihi tiga tahun atau kedua-duanya dan didenda selanjutnya sebanyak satu ratus ringgit bagi setiap hari yang kesalahan itu berterusan selepas sabitan. 
+    <br>Bertarikh pada ..................haribulan................... 2021</p>
+    
+    <h4 class="right">.......................................................................
+    <br>(Ketua Pengarah Perkhidmatan Bomba)</h4>
     <br>
-    <h4 class="right">.......................................................................</h4>
-    <h4 class="right">(Ketua Pengarah Perkhidmatan Bomba)</h4>
     <hr>
-    <footer>
-    + atau mana-mana Pegawai Bomba yang telah diwakilkan kuasa kepadanya oleh Ketua Pengarah. 
-    <br><sup>*</sup> Potong jika tidak perlu.
-    </footer>
+    <span class="foot">+ atau mana-mana Pegawai Bomba yang telah diwakilkan kuasa kepadanya oleh Ketua Pengarah. 
+    <br><sup>*</sup> Potong jika tidak perlu.</span>
 
 </body>
