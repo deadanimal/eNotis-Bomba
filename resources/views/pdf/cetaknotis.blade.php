@@ -1,4 +1,8 @@
 <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
     <style type="text/css">
 
         .right{
@@ -10,6 +14,7 @@
           border-bottom: 1.5px dotted black;
           line-height:5px;
           font-weight: bold;
+
         }
 
         u {
@@ -27,10 +32,10 @@
 
         * {
             font: 12pt "Times New Roman";
-            line-height: 1.5;
+            line-height: 1.25;
         }
 
-        center {
+        .center {
         text-align: center;
         font: "Times New Roman";
         font-size: 11pt;
@@ -65,39 +70,45 @@
 </head>
 
 <body>
+    <p class="right">{{$notis->no_siri}}</p>
+    <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4" style="text-align:center">JADUAL PERTAMA</div>
+        <div class="col-sm-4" style="text-align:right; font-size:11pt;">TDI &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /2021</div>
+    </div>
 
-    <p class="right">{{$notis->no_siri}}
-    <br>TDI &nbsp; &nbsp;/2021</p>
 
-    <br><center>JADUAL PERTAMA
-    <br><b>AKTA PERKHIDMATAN BOMBA 1988
+    <br><center><b>AKTA PERKHIDMATAN BOMBA 1988
     <br>BORANG A</b>
     <br>(Seksyen 8(1))
     <br>MENGHAPUSKAN BAHAYA KEBAKARAN</center>
+
     
     <br><br>
-    <div class="dotted">Kepada: Pengurus</div>
+    <div class="dotted" style="text-transform:uppercase;">Kepada: Pengurus</div>
     @foreach ($premis as $premis)
-    <br> <div class="dotted">{{$premis->nama_premis}}</div>
-    <br> <div class="dotted">{{$premis->alamat}}</div> 
+    <br> <div class="dotted" style="text-transform:uppercase;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {{$premis->nama_premis}}</div>
+    <br> <div class="dotted" style="text-transform:uppercase;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {{$premis->alamat}}</div> 
+    <br> <div class="dotted"></div>
     @endforeach
 
-    <p>SILA AMBIL PERHATIAN bahawa Ketua Pengarah Perkhidmatan Bomba +, setelah berpuas hati tentang adanya di <u>{{$premis->nama_premis}}, {{$premis->alamat}}</u> </p>
+   <br> <p> SILA AMBIL PERHATIAN bahawa Ketua Pengarah Perkhidmatan Bomba +, setelah berpuas hati tentang adanya di <u>{{$premis->nama_premis}},{{$premis->alamat}} </u></p>
 
     <p>suatu bahaya kebakaran, iaitu <u>{{$notis->jenis_ppk}} yang {{$notis->kesalahan}} di {{$notis->aras}} bahagian {{$notis->lokasi}} premis, di bawah {{$notis->seksyen}}</u></p>
 
-    <p>dengan ini, menurut seksyen 8(1) Akta Perkhidmatan Bomba 1988, menghendaki tuan, dalam masa <u>{{$notis->tempoh}}</u>  dari penyampaian notis ini, (1) menghapuskan bahaya kebakaran itu, dan bagi tujuan itu hendaklah<u> {{$notis->pembetulan}} mengikut undang-undang yang telah diperuntukan oleh Jabatan Bomba</u> </p>
+    <p>dengan ini, menurut seksyen 8(1) Akta Perkhidmatan Bomba 1988, menghendaki tuan, dalam masa <u >{{$notis->tempoh}}</u>  dari penyampaian notis ini, (1) menghapuskan bahaya kebakaran itu, dan bagi tujuan itu hendaklah<u> {{$notis->pembetulan}} mengikut undang-undang yang telah diperuntukan oleh Jabatan Bomba</u> 
+    </p>
 
     <p>dan (2)<sup>*</sup>melakukan apa jua yang perlu bagi mencegah berulangnya bahaya kebakaran itu, dan bagi tujuan tersebut hendaklah <u>{{$notis->tujuan}}</u> </p>
 
-    <p> SILA AMBIL PERHATIAN BAHAWA Jika tuan tidak memenuhi apa-apa kehendak notis dalam masa yang dinyatakan, tuan adalah melakukan suatu kesalahan yang mana apabila disabitkan tuan boleh didenda tidak melebihi lima ribu ringgit atau dipenjarakan selama tempoh tidak melebihi tiga tahun atau kedua-duanya dan didenda selanjutnya sebanyak satu ratus ringgit bagi setiap hari yang kesalahan itu berterusan selepas sabitan. 
-    <br>Bertarikh pada ..................haribulan................... 2021</p>
+    <p> SILA AMBIL PERHATIAN BAHAWA Jika tuan tidak memenuhi apa-apa kehendak notis dalam masa yang dinyatakan, tuan adalah melakukan suatu kesalahan yang mana apabila disabitkan tuan boleh didenda tidak melebihi lima ribu ringgit atau dipenjarakan selama tempoh tidak melebihi tiga tahun atau kedua-duanya dan didenda selanjutnya sebanyak satu ratus ringgit bagi setiap hari yang kesalahan itu berterusan selepas sabitan.</p>
+    <br><p>Bertarikh pada ..................haribulan................... 2021</p>
     
     <h4 class="right">.......................................................................
     <br>(Ketua Pengarah Perkhidmatan Bomba)</h4>
     <br>
     <hr>
-    <span class="foot">+ atau mana-mana Pegawai Bomba yang telah diwakilkan kuasa kepadanya oleh Ketua Pengarah. 
+    <span class="foot">+ "atau mana-mana Pegawai Bomba yang telah diwakilkan kuasa kepadanya oleh Ketua Pengarah"
     <br><sup>*</sup> Potong jika tidak perlu.</span>
 
 </body>

@@ -132,14 +132,14 @@
                                         <option @if ($notis->kesalahan == 'tiada') selected @endif value='tiada'>Tiada</option>
                                         <option @if ($notis->kesalahan == 'tidak diselenggara') selected @endif value='tidak diselenggara'>Tidak diselenggara
                                         </option>
-                                        <option @if ($notis->kesalahan == 'tidak berfungsi') selected @endif value='tidak befungsi'>Tidak Berfungsi</option>
+                                        <option @if ($notis->kesalahan == 'tidak berfungsi') selected @endif value='tidak berfungsi'>Tidak Berfungsi</option>
                                         <option @if ($notis->kesalahan == 'tamat tempoh dan tidak diselenggara') selected @endif value='tamat tempoh dan tidak diselenggara'>Tamat tempoh dan tidak diselenggara</option>
                                         <option @if ($notis->kesalahan == 'rosak') selected @endif value='rosak'>Rosak</option>
                                         <option @if ($notis->kesalahan == 'mempunyai halangan') selected @endif value='mempunyai halangan'>Mempunyai halangan</option> 
                                     </select>
 
                                     <label>ARAS/TINGKAT</label>
-                                    <input type="text" name="aras" value="{{$notis->aras}}" class="form-control mb-3">
+                                    <input type="text" name="aras" value="{{$notis->aras}}" class="form-control mb-3" >
 
                                         {{-- <select class="form-control mb-3" name="lokasi">
                                         <option @if ($notis->lokasi == 'Tingkat 1') selected @endif value="Tingkat 1">Tingkat 1</option>
@@ -152,7 +152,7 @@
 
                             
                                     <label>LOKASI</label>
-                                    <input type="text" name="lokasi" value="{{$notis->lokasi}}" class="form-control mb-3">
+                                    <input type="text" name="lokasi" value="{{$notis->lokasi}}" class="form-control mb-3" style="text-transform:lowercase">
                                     {{-- <select class="form-control mb-3" name="lokasi">
                                         <option @if ($notis->lokasi == 'Tingkat 1') selected @endif value="Tingkat 1">Tingkat 1</option>
                                         <option @if ($notis->lokasi == 'Tingkat 2') selected @endif value="Tingkat 2">Tingkat 2</option>

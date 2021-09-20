@@ -144,29 +144,26 @@
                                                 <label>TARIKH PEMERIKSAAN</label>
                                                 <input class="multisteps-form__input form-control mb-3" type="date" placeholder="01-01-2021" name="tarikh_pemeriksaan" />
                                                 <label>NAMA PREMIS</label>
-                                                {{-- <input class="multisteps-form__input form-control mb-3" name="nama_premis" type="text" placeholder="Pipeline Network Sdn Bhd" /> --}}
                                                 <select class="multisteps-form__input form-control mb-3" name="id_premis">
                                                     <option hidden>SILA PILIH</option>
                                                    @foreach($premis as  $premis)
                                                       <option value="{{$premis->id}}">{{$premis->nama_premis}}</option>
                                                      @endforeach 
                                                 </select>
+                                                
                                                 {{-- <label>ALAMAT PREMIS</label>
                                                 <textarea class="multisteps-form__input form-control mb-3" name="alamat" placeholder="C3A12, Metropolitan Square, Center Wing, Jalan PJU 8/1, 47820 Petaling Jaya, Selangor"></textarea> --}}
                                                 <label>NO. SIRI RUJUKAN</label>
                                                 {{--<input type="text" name="no_siri" class="multisteps-form__input form-control mb-3"> --}}
                                                 <!-- <input class="multisteps-form__input form-control mb-3" type="text" placeholder="Eg. JPBM" /> -->
                                                  <div class="input-group">
-                                                    <span class="input-group-text">JPBM/KL/TDI:700-</span>
+                                                    <span class="input-group-text">JBPM/KL/TDI:700-</span>
                                                     <input type="text" aria-label="input1" class="multisteps-form__input form-control" name="input1">
-                                                    
                                                     <span class="input-group-text">/</span>
                                                     <input type="text" aria-label="input2" class="multisteps-form__input form-control" name="input2">
                                                     <span class="input-group-text">/</span>
                                                     <input type="text" aria-label="input3" class="multisteps-form__input form-control" name="input3">
-                                                    <span class="input-group-text">TDI</span>
-                                                    <input type="text" aria-label="input4" class="multisteps-form__input form-control" name="input4">
-                                                    <span class="input-group-text">/2021</span>
+
                                                 </div> 
                                             </div>
                                         </div>
@@ -234,7 +231,7 @@
                                                 <input type="text" name="lokasi_lain " id="lokasi_lain"  class="multisteps-form__input form-control mb-3" style="display: none"> --}}
 
                                                 <label>LOKASI</label>
-                                                <input type="text" name="lokasi" class="multisteps-form__input form-control mb-3">
+                                                <input type="text" name="lokasi" class="multisteps-form__input form-control mb-3" style="text-transform:lowercase">
 
 
                                                 <label>PEMBETULAN</label>
@@ -296,7 +293,7 @@
                                         <div class="row">
                                             <div class="button-row d-flex mt-4 col-12">
                                                 <button class="btn bg-gradient-light mb-0 js-btn-prev" type="button" title="Prev">Kembali</button>
-                                                 <button class="btn bg-gradient-dark ms-auto mb-0" type="submit" title="Send">Hantar</button> 
+                                                <button class="btn bg-gradient-dark ms-auto mb-0" type="submit" title="Send">Hantar</button> 
                                             
                                             </div>
                                         </div>
@@ -341,7 +338,7 @@
      </script> --}}
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script>
+    {{-- <script>
     $(tujuan).ready(function(){
         var ppk = $("#jenis_ppk").val();
         var tujuan;
@@ -406,7 +403,7 @@
             });
         });
     });
-    </script>
+    </script> --}}
 
 
               
