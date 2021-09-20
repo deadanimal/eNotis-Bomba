@@ -190,15 +190,15 @@
                                                         <option value="Pam Standby">Pam Standby</option>
                                             
                                                     <!-- <option value="1">PAM</option> -->
-                                                    <option value="pintu api">Pintu Api</option>
-                                                    <option value="alat pemadam api">Alat Pemadam Api</option>
-                                                    <option value="lampu kecemasan">Lampu Kecemasan</option>
-                                                    <option value="tanda tempat keluar kecemasan">Tanda Tempat Keluar Kecemasan</option>
-                                                    <option value="tangga">Tangga</option>
-                                                    <option value="pemegang injap sistem gelung hos">Pemegang Injap Sistem Gelung Hos</option>
-                                                    <option value="panel penggera kebakaran">Panel Penggera Kebakaran</option>
-                                                    <option value="sistem penggera kebakaran utama">Sistem Penggera Kebakaran Utama</option>
-                                                    <option value="pili bomba">Pili Bomba</option>
+                                                    <option value="Pintu Api">Pintu Api</option>
+                                                    <option value="Alat Pemadam Api">Alat Pemadam Api</option>
+                                                    <option value="Lampu Kecemasan">Lampu Kecemasan</option>
+                                                    <option value="Tanda Tempat Keluar Kecemasan">Tanda Tempat Keluar Kecemasan</option>
+                                                    <option value="Tangga">Tangga</option>
+                                                    <option value="Pemegang Injap Sistem Gelung Hos">Pemegang Injap Sistem Gelung Hos</option>
+                                                    <option value="Panel Penggera Kebakaran">Panel Penggera Kebakaran</option>
+                                                    <option value="Sistem Penggera Kebakaran Utama">Sistem Penggera Kebakaran Utama</option>
+                                                    <option value="Pili Bomba">Pili Bomba</option>
                                                 </select>
 
                                                 <label>KESALAHAN</label>
@@ -345,19 +345,19 @@
         
         $("#jenis_ppk").click(function(){
             
-            if($(this).val()=="pintu api"){
+            if($(this).val()=="Pintu Api"){
                 tujuan="MEMASTIKAN PINTU API SENTIASA BERADA DALAM KEADAAN BAIK DAN HENDAKLAH DITUTUP PADA SETIAP MASA";
             }
 
-            if($(this).val()=="alat pemadam api"){
+            if($(this).val()=="Alat Pemadam Api"){
                 tujuan="MEMASTIKAN ALAT PEMADAM API MUDAH ALIH DISEDIAKAN MENGIKUT PIAWAIAN MALAYSIA 1539, DAN SENTIASA BERADA DALAM KEADAAN BAIK"; 
             }
 
-            if($(this).val()=="lampu kecemasan"){
+            if($(this).val()=="Lampu Kecemasan"){
                 tujuan="MEMASTIKAN LAMPU KECEMASAN SENTIASA BERADA DALAM KEADAAN BAIK DAN MEMATUHI PIAWAIAN MALAYSIA (MS) 619";
             }
 
-            if($(this).val()=="tanda tempat keluar kecemasan"){
+            if($(this).val()=="Tanda Tempat Keluar Kecemasan"){
                 tujuan="MEMASTIKAN TANDA TEMPAR KELUAR KECEMASAN BERFUNGSI DAN BERADA DALAM KEADAAN BAIK SETIAP MASA";
             }
 
@@ -365,19 +365,19 @@
                 tujuan="MEMASTIKAN SISTEM GELUNG HOS SENTIASA BERADA DALAM KEADAAN BAIK DAN BOLEH DIGUNAKAN PADA BILA-BILA MASA";
             }
 
-            if($(this).val()=="tangga"){
+            if($(this).val()=="Tangga"){
                 tujuan="MEMASTIKAN TIADA HALANGAN PADA TANGGA JALAN KELUAR UNTUK MENCEGAH KEMASUKAN ASAP BAGI TUJUAN PELEPASAN DIRI DAN SELAMAT DILALUI SEKIRANYA BERLAKU KEBAKARAN";
             }
 
-            if($(this).val()=="panel penggera kebakaran"){
+            if($(this).val()=="Panel Penggera Kebakaran"){
                 tujuan="MEMASTIKAN PANEL PENGGERA KEBAKARAN BERFUNGSI DAN SENTIASA BERADA DALAM KEADAAN BAIK";
             }
 
-            if($(this).val()=="sistem penggera kebakaran utama"){
+            if($(this).val()=="Sistem Penggera Kebakaran Utama"){
                 tujuan="MEMASTIKAN SISTEM PENGGERA KEBAKARAN UTAMA BERFUNGSI DAN SENTIASA BERADA DALAM KEADAAN BAIK";
             }
 
-            if($(this).val()=="pili bomba"){
+            if($(this).val()=="Pili Bomba"){
                 tujuan="MEMASTIKAN PILI BOMBA PREMIS SENTIASA BERADA DALAM KEADAAN BAIK DAN BOLEH DIGUNAKAN PADA BILA-BILA MASA";
             }
 

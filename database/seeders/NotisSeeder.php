@@ -15,8 +15,8 @@ class NotisSeeder extends Seeder
     {
         Notis::create ([
             'tarikh_pemeriksaan'=>'2021-08-01',
-            'jenis_ppk'=>'sistem penggera kebakaran utama',
-            'no_siri'=>'JPBM/KL/TDI: 700-1/2/3/TDI/3/2021',
+            'jenis_ppk'=>'Sistem Penggera Kebakaran Utama',
+            'no_siri'=>'JBPM/KL/TDI: 700-1/2/3',
             'kesalahan'=>'tidak berfungsi',
             'aras'=>'aras 6',
             'lokasi'=>'depan',
@@ -30,8 +30,8 @@ class NotisSeeder extends Seeder
 
         Notis::create ([
             'tarikh_pemeriksaan'=>'2021-07-01',
-            'jenis_ppk'=>'lampu kecemasan',
-            'no_siri'=>'JPBM/KL/TDI: 700-1/2/4/TDI/4/2021',
+            'jenis_ppk'=>'Lampu Kecemasan',
+            'no_siri'=>'JBPM/KL/TDI: 700-4/4/21',
             'kesalahan'=>'tiada',
             'aras'=>'aras 7',
             'lokasi'=>'belakang',

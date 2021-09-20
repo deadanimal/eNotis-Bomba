@@ -38,7 +38,7 @@
         .center {
         text-align: center;
         font: "Times New Roman";
-        font-size: 11pt;
+        font-size: 12pt;
         font-family:"Times New Roman";
 
         }
@@ -101,10 +101,10 @@
          <div class="kanan">TDI &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /2021</div>
     </div>
 
-    <br><center><b>AKTA PERKHIDMATAN BOMBA 1988
-    <br>BORANG A</b>
-    <br>(Seksyen 8(1))
-    <br>MENGHAPUSKAN BAHAYA KEBAKARAN</center>
+    <p class="center"><b>AKTA PERKHIDMATAN BOMBA 1988</b></p>
+    <p class="center"><b>BORANG A</b></p>
+    <p class="center">(Seksyen 8(1))</p>
+    <p class="center">NOTIS MENGHAPUSKAN BAHAYA KEBAKARAN</p>
 
     
     <br><br>
@@ -117,7 +117,7 @@
 
    <br> <p> SILA AMBIL PERHATIAN bahawa Ketua Pengarah Perkhidmatan Bomba +, setelah berpuas hati tentang adanya di <u>{{$premis->nama_premis}}, {{$premis->alamat}}</u></p>
 
-    <p>suatu bahaya kebakaran, iaitu <u>{{$notis->jenis_ppk}} yang {{$notis->kesalahan}} di {{$notis->aras}} bahagian {{$notis->lokasi}} premis, di bawah {{$notis->seksyen}}</u></p>
+    <p>suatu bahaya Kebakaran, iaitu <u>{{$notis->jenis_ppk}} yang {{$notis->kesalahan}} di {{$notis->aras}} bahagian {{$notis->lokasi}} premis, di bawah {{$notis->seksyen}}</u></p>
 
     <p>dengan ini, menurut seksyen 8(1) Akta Perkhidmatan Bomba 1988, menghendaki tuan, dalam masa <u >{{$notis->tempoh}}</u>  dari penyampaian notis ini, (1) menghapuskan bahaya kebakaran itu, dan bagi tujuan itu hendaklah<u> {{$notis->pembetulan}} mengikut undang-undang yang telah diperuntukan oleh Jabatan Bomba</u> 
     </p>

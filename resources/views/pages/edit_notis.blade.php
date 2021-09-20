@@ -1,4 +1,4 @@
-@extends('layouts.base')
+ @extends('layouts.base')
 
 @section('content')
 
@@ -115,15 +115,15 @@
                                         <option @if ($notis->jenis_ppk == 'Pam Jokey') selected @endif value='Pam Jokey'>Pam Jokey</option>
                                         <option @if ($notis->jenis_ppk == 'Pam Duty') selected @endif value='Pam Duty'>Pam Duty</option>
                                         <option @if ($notis->jenis_ppk == 'Pam Standby') selected @endif value='Pam Standby' >Pam Standby</option>
-                                        <option @if ($notis->jenis_ppk == 'pintu api') selected @endif value='pintu api'>Pintu Api</option>
-                                        <option @if ($notis->jenis_ppk == 'alat pemadam api') selected @endif value='alat pemadam api'>Alat Pemadam Api</option>
-                                        <option @if ($notis->jenis_ppk == 'lampu kecemasan') selected @endif value='lampu kecemasan'>Lampu Kecemasan</option>
-                                        <option @if ($notis->jenis_ppk == 'sistem penggera kebakaran utama') selected @endif value='sistem penggera kebakaran utama'>Sistem Penggera Kebakaran Utama</option>
-                                        <option @if ($notis->jenis_ppk == 'tanda tempat keluar kecemasan') selected @endif value='tanda tempat keluar kecemasan'>Tanda Tempat Keluar Kecemasan</option>
-                                        <option @if ($notis->jenis_ppk == 'panel penggera kebakaran') selected @endif value='panel penggera kebakaran'>Panel Penggera Kebakaran</option>
-                                        <option @if ($notis->jenis_ppk == 'pili bomba') selected @endif value='pili bomba'>Pili Bomba</option>
-                                        <option @if ($notis->jenis_ppk == 'tangga') selected @endif value='tangga'>Tangga</option>
-                                        <option @if ($notis->jenis_ppk == 'pemegang injap sistem gelung hos') selected @endif value='pemegang injap sistem gelung hos'>Pemegang Injap Sistem Gelung Hos</option>
+                                        <option @if ($notis->jenis_ppk == 'Pintu Api') selected @endif value='Pintu Api'>Pintu Api</option>
+                                        <option @if ($notis->jenis_ppk == 'Alat Pemadam Api') selected @endif value='Alat Pemadam Api'>Alat Pemadam Api</option>
+                                        <option @if ($notis->jenis_ppk == 'Lampu Kecemasan') selected @endif value='Lampu Kecemasan'>Lampu Kecemasan</option>
+                                        <option @if ($notis->jenis_ppk == 'Sistem Penggera Kebakaran Utama') selected @endif value='Sistem Penggera Kebakaran Utama'>Sistem Penggera Kebakaran Utama</option>
+                                        <option @if ($notis->jenis_ppk == 'Tanda Tempat Keluar Kecemasan') selected @endif value='Tanda Tempat Keluar Kecemasan'>Tanda Tempat Keluar Kecemasan</option>
+                                        <option @if ($notis->jenis_ppk == 'Panel Penggera Kebakaran') selected @endif value='Panel Penggera Kebakaran'>Panel Penggera Kebakaran</option>
+                                        <option @if ($notis->jenis_ppk == 'Pili Bomba') selected @endif value='Pili Bomba'>Pili Bomba</option>
+                                        <option @if ($notis->jenis_ppk == 'Tangga') selected @endif value='Tangga'>Tangga</option>
+                                        <option @if ($notis->jenis_ppk == 'Pemegang Injap Sistem Gelung Hos') selected @endif value='Pemegang Injap Sistem Gelung Hos'>Pemegang Injap Sistem Gelung Hos</option>
                                     </select>
 
                                     <label>KESALAHAN</label>
