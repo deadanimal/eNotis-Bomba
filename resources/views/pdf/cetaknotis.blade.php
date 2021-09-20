@@ -65,18 +65,41 @@
             text-align: center;
         }
 
+        .col-sm-4 {
+            flex: 0 0 auto;
+            width: 33.33333333%;
+        }
+
+        span.a {
+        display: inline; /* the default for span */
+        width: 100px;
+        height: 100px;
+        padding: 5px;
+        }
+
+        .tengah {
+            position: absolute;
+            right: 0px;
+            left: 0px;
+        }
+
+        .kanan {
+            position: absolute;
+            right: 0px;
+            font: 10pt "Times New Roman";
+        }
+
     </style>
 
 </head>
 
 <body>
     <p class="right">{{$notis->no_siri}}</p>
-    <div class="row">
+     <div class="row">
         <div class="col-sm-4"></div>
-        <div class="col-sm-4" style="text-align:center">JADUAL PERTAMA</div>
-        <div class="col-sm-4" style="text-align:right; font-size:11pt;">TDI &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /2021</div>
+        <div style="text-align:center">JADUAL PERTAMA</
+         <div class="kanan">TDI &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; /2021</div>
     </div>
-
 
     <br><center><b>AKTA PERKHIDMATAN BOMBA 1988
     <br>BORANG A</b>
@@ -92,7 +115,7 @@
     <br> <div class="dotted"></div>
     @endforeach
 
-   <br> <p> SILA AMBIL PERHATIAN bahawa Ketua Pengarah Perkhidmatan Bomba +, setelah berpuas hati tentang adanya di <u>{{$premis->nama_premis}},{{$premis->alamat}} </u></p>
+   <br> <p> SILA AMBIL PERHATIAN bahawa Ketua Pengarah Perkhidmatan Bomba +, setelah berpuas hati tentang adanya di <u>{{$premis->nama_premis}}, {{$premis->alamat}}</u></p>
 
     <p>suatu bahaya kebakaran, iaitu <u>{{$notis->jenis_ppk}} yang {{$notis->kesalahan}} di {{$notis->aras}} bahagian {{$notis->lokasi}} premis, di bawah {{$notis->seksyen}}</u></p>
 
