@@ -87,11 +87,11 @@
                     <div class="card-body">
                         <div class="form-group">
                             <label class="form-control-label">Nama</label>
-                            <input class="form-control" type="text" value="Shafie Bin Khamis">
+                            <input class="form-control" type="text" value="Admin">
                         </div>
                         <div class="form-group">
                             <label class="form-control-label">Jawatan</label>
-                            <input class="form-control" type="text" value="Pegawai Bomba Kanan 1">
+                            <input class="form-control" type="text" value="Administrator">
                         </div>
                         <div class="form-group">
                             <label class="form-control-label">Cawangan</label>
@@ -99,11 +99,11 @@
                         </div>
                         <div class="form-group">
                             <label class="form-control-label">Emel</label>
-                            <input class="form-control" type="text" value="shafiekhamis@bomba.gov.my">
+                            <input class="form-control" type="text" value="bbp-ttdi.bomba@1govuc.gov.my">
                         </div>
                         <div class="form-group">
                             <label class="form-control-label">No. Tel</label>
-                            <input class="form-control" type="text" value="0134203677">
+                            <input class="form-control" type="text" value="07675321">
                         </div>
                         <button class="btn btn-success w-100 mt-3 mb-2" onclick="soft.showSwal('success-message')">Kemaskini</button>
                     </div>
