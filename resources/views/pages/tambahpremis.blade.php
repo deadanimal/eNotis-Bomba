@@ -91,6 +91,42 @@
                     <textarea class="form-control" placeholder="Alamat Premis" rows="3" name="alamat"></textarea>
                 </div>
             </div>
+
+            <div class="col-xl-12">
+                <div class="form-group">
+                    <label class="form-control-label">Poskod</label>
+                    <input class="form-control" type="text" name="poskod">
+                </div>
+            </div>
+
+            <div class="col-xl-12">
+                <div class="form-group">
+                    <label class="form-control-label">Negeri</label>
+                    <select class="form-control mb-3" name="negeri">
+                    <option hidden>Sila Pilih</option>
+                    <option value="Johor">Johor</option>
+                    <option value="Selangor">Selangor</option>
+                    <option value="Kedah">Kedah</option>
+                    <option value="Kelantan">Kelantan</option>
+                    <option value="Kuala Lumpur">Kuala Lumpur</option>
+                    <option value="Labuan">Labuan</option>
+                    <option value="Melaka">Melaka</option>
+                    <option value="Negeri Sembilan">Negeri Sembilan</option>
+                    <option value="Pahang">Pahang</option>
+                    <option value="Pulau Pinang">Pulau Pinang</option>
+                    <option value="Perak">Perak</option>
+                    <option value="Perlis">Perlis</option>
+                    <option value="Putrajaya">Putrajaya</option>
+                    <option value="Sabah">Sabah</option>
+                    <option value="Sarawak">Sarawak</option>
+                    <option value="Terengganu">Terengganu</option>
+                </select>
+                </div>
+            </div>
+
+            
+
+            
             <div class="col-xl-12">
                 <div class="form-group">
                     <label class="form-control-label">Jenis Perniagaan</label>

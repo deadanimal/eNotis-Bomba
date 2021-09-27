@@ -38,6 +38,9 @@ class PremisController extends Controller
         $premis->pemilik=$request->pemilik;
         $premis->no_tel=$request->no_tel;
         $premis->no_premis=$request->no_premis;
+        $premis->poskod=$request->poskod;
+        $premis->negeri=$request->negeri;
+        
         //$premis->id_notis=$request->id_notis;
 
         $premis->save();
@@ -69,6 +72,8 @@ class PremisController extends Controller
         $premis->jenis_perniagaan=$request->jenis_perniagaan;
         $premis->pemilik=$request->pemilik;
         $premis->no_tel=$request->no_tel;
+        $premis->poskod=$request->poskod;
+        $premis->negeri=$request->negeri;
         $premis->no_premis=$request->no_premis;
 
         $premis->save();

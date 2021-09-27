@@ -323,87 +323,9 @@
             
 // </script> --}}
 
-{{-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-            <script type="text/javascript">
-                 $(function() {
-                      $("#aras").change(function() {
-                              if ($(this).val() == "lain") {
-                                $("#lokasi_lain").show();
+{{--   --}}
 
-                               } else {
-                               $("#lokasi_lain").hide();
-                               }
-                      });
-            });
-     </script> --}}
 
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    {{-- <script>
-    $(tujuan).ready(function(){
-        var ppk = $("#jenis_ppk").val();
-        var tujuan;
-        
-        $("#jenis_ppk").click(function(){
-            
-            if($(this).val()=="Pintu Api"){
-                tujuan="MEMASTIKAN PINTU API SENTIASA BERADA DALAM KEADAAN BAIK DAN HENDAKLAH DITUTUP PADA SETIAP MASA";
-            }
-
-            if($(this).val()=="Alat Pemadam Api"){
-                tujuan="MEMASTIKAN ALAT PEMADAM API MUDAH ALIH DISEDIAKAN MENGIKUT PIAWAIAN MALAYSIA 1539, DAN SENTIASA BERADA DALAM KEADAAN BAIK"; 
-            }
-
-            if($(this).val()=="Lampu Kecemasan"){
-                tujuan="MEMASTIKAN LAMPU KECEMASAN SENTIASA BERADA DALAM KEADAAN BAIK DAN MEMATUHI PIAWAIAN MALAYSIA (MS) 619";
-            }
-
-            if($(this).val()=="Tanda Tempat Keluar Kecemasan"){
-                tujuan="MEMASTIKAN TANDA TEMPAR KELUAR KECEMASAN BERFUNGSI DAN BERADA DALAM KEADAAN BAIK SETIAP MASA";
-            }
-
-            if($(this).val()=="pemegang injap sistem gegelung hos"){
-                tujuan="MEMASTIKAN SISTEM GELUNG HOS SENTIASA BERADA DALAM KEADAAN BAIK DAN BOLEH DIGUNAKAN PADA BILA-BILA MASA";
-            }
-
-            if($(this).val()=="Tangga"){
-                tujuan="MEMASTIKAN TIADA HALANGAN PADA TANGGA JALAN KELUAR UNTUK MENCEGAH KEMASUKAN ASAP BAGI TUJUAN PELEPASAN DIRI DAN SELAMAT DILALUI SEKIRANYA BERLAKU KEBAKARAN";
-            }
-
-            if($(this).val()=="Panel Penggera Kebakaran"){
-                tujuan="MEMASTIKAN PANEL PENGGERA KEBAKARAN BERFUNGSI DAN SENTIASA BERADA DALAM KEADAAN BAIK";
-            }
-
-            if($(this).val()=="Sistem Penggera Kebakaran Utama"){
-                tujuan="MEMASTIKAN SISTEM PENGGERA KEBAKARAN UTAMA BERFUNGSI DAN SENTIASA BERADA DALAM KEADAAN BAIK";
-            }
-
-            if($(this).val()=="Pili Bomba"){
-                tujuan="MEMASTIKAN PILI BOMBA PREMIS SENTIASA BERADA DALAM KEADAAN BAIK DAN BOLEH DIGUNAKAN PADA BILA-BILA MASA";
-            }
-
-            if($(this).val()=="Pam Standby"){
-                tujuan="MEMASTIKAN PAM STANDBY PREMIS SENTIASA BERADA DALAM KEADAAN BAIK DAN BOLEH DIGUNAKAN PADA BILA-BILA MASA";
-            }
-
-            if($(this).val()=="Pam Duty"){
-                tujuan="MEMASTIKAN PAM DUTY PREMIS SENTIASA BERADA DALAM KEADAAN BAIK DAN BOLEH DIGUNAKAN PADA BILA-BILA MASA";
-
-            }
-
-            if($(this).val()="Pam Jokey"){
-                tujuan="MEMASTIKAN PAM JOKEY PREMIS SENTIASA BERADA DALAM KEADAAN BAIK DAN BOLEH DIGUNAKAN PADA BILA-BILA MASA";
-            }
-
-            // Send the input data to the server using get
-            $.get("/examples/php/create-table.php", {number: tujuan} , function(tujuan){
-
-            // Display the returned data in browser
-            $("#tujuan").html(data);
-
-            });
-        });
-    });
-    </script> --}}
 
 
               

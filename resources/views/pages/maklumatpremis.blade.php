@@ -96,6 +96,39 @@
                             <textarea class="form-control" rows="3" id="alamat" name="alamat">{{$premis->alamat}}</textarea>
                         </div>
                     </div>
+
+                    <div class="col-xl-12">
+                        <div class="form-group">
+                            <label class="form-control-label">Poskod</label>
+                            <input type="text" class="form-control"  name="poskod" value="{{$premis->poskod}}">
+                        </div>
+                    </div>
+
+                    <div class="col-xl-12">
+                        <div class="form-group">
+                           <label class="form-control-label">Negeri</label>
+                            <select class="form-control mb-3" name="negeri">
+                                <option @if ($premis->negeri=="Johor") selected @endif value="Johor">Johor</option>
+                                <option @if ($premis->negeri=="Selangor") @endif value="Selangor">Selangor</option>
+                                <option @if($premis->negeri=="Kedah")selected   @endif value="Kedah">Kedah</option>
+                                <option @if($premis->negeri=="Kelantan") selected @endif value="Kelantan">Kelantan</option>
+                                <option @if ($premis->negeri=="Kuala Lumpur" ) selected @endif value="Kuala Lumpur">Kuala Lumpur</option>
+                                <option @if ($premis->negeri=="Labuan") selected @endif value="Labuan">Labuan</option>
+                                <option @if ($premis->negeri=="Melaka")selected @endif value="Melaka">Melaka</option>
+                                <option @if ($premis->negeri=="Negeri Sembilan")selected  @endif value="Negeri Sembilan">Negeri Sembilan</option>
+                                <option @if ($premis->negeri=="Pahang")selected @endif value="Pahang">Pahang</option>
+                                <option @if ($premis->negeri=="Pulau Pinang")selected @endif value="Pulau Pinang">Pulau Pinang</option>
+                                <option @if ($premis->negeri=="Perak") selected @endif value="Perak">Perak</option>
+                                <option @if ($premis->negeri=="Perlis")@endif value="Perlis">Perlis</option>
+                                <option @if ($premis->negeri=="Putrajaya") @endif value="Putrajaya">Putrajaya</option>
+                                <option @if ($premis->negeri=="Sabah") @endif value="Sabah">Sabah</option>
+                                <option @if ($premis->negeri=="Sarawak") @endif value="Sarawak">Sarawak</option>
+                                <option @if ($premis->negeri=="Terengganu")@endif value="Terengganu">Terengganu</option>
+
+                            </select>
+                        </div>
+                    </div>
+
                     <div class="col-xl-12">
                         <div class="form-group">
                            <label class="form-control-label">Jenis Perniagaan</label>

@@ -18,6 +18,8 @@ class CreatePremisTable extends Migration
 
             $table->String('nama_premis');
             $table->String('alamat');
+            $table->String('poskod');
+            $table->String('negeri');
             $table->String('jenis_perniagaan');
             $table->String('pemilik');
             $table->String('no_tel');

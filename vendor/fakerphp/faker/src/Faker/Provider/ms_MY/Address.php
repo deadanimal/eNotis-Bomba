@@ -78,7 +78,7 @@ class Address extends \Faker\Provider\Address
      * @see https://en.wikipedia.org/wiki/List_of_roads_in_Kuala_Lumpur
      * @see https://en.wikipedia.org/wiki/List_of_roads_in_Ipoh
      * @see https://en.wikipedia.org/wiki/Transportation_in_Seremban#Inner_city_roads
-     * @see https://en.wikipedia.org/wiki/List_of_streets_in_George_Town,_Penang
+     * @see https://en.wikipedia.org/wiki/List_of_streets_in_George_Town,_Pulau Pinang
      */
     protected static $streetSuffix = [
         'Air Itam', 'Alor', 'Ampang', 'Ampang Hilir', 'Anson', 'Ariffin',
@@ -123,7 +123,7 @@ class Address extends \Faker\Provider\Address
      * @see https://en.wikipedia.org/wiki/Template:Melaka > Townships
      * @see https://en.wikipedia.org/wiki/Template:Negeri_Sembilan > Townships
      * @see https://en.wikipedia.org/wiki/Template:Perak > Townships
-     * @see https://en.wikipedia.org/wiki/Template:Penang > Townships
+     * @see https://en.wikipedia.org/wiki/Template:Pulau Pinang > Townships
      * @see https://en.wikipedia.org/wiki/Template:Selangor > Townships
      * @see https://en.wikipedia.org/wiki/Template:Terengganu > Townships
      */
@@ -172,7 +172,7 @@ class Address extends \Faker\Provider\Address
      * @see https://en.wikipedia.org/wiki/Template:Pahang
      * @see https://en.wikipedia.org/wiki/Template:Perak
      * @see https://en.wikipedia.org/wiki/Template:Perlis
-     * @see https://en.wikipedia.org/wiki/Template:Penang
+     * @see https://en.wikipedia.org/wiki/Template:Pulau Pinang
      * @see https://en.wikipedia.org/wiki/Template:Sabah
      * @see https://en.wikipedia.org/wiki/Template:Sarawak
      * @see https://en.wikipedia.org/wiki/Template:Selangor
@@ -433,7 +433,7 @@ class Address extends \Faker\Provider\Address
             'Pahang',
         ],
         'penang' => [
-            'Penang',
+            'Pulau Pinang',
             'Pulau Pinang',
         ],
         'perak' => [

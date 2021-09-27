@@ -70,8 +70,6 @@ class NotisController extends Controller
         $notis->status="Siap";
         $notis->id_premis=$request->id_premis;
         
-        
-
         $notis->save();
         return redirect('/notis');
     }

@@ -112,10 +112,10 @@
     @foreach ($premis as $premis)
     <br> <div class="dotted" style="text-transform:uppercase;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {{$premis->nama_premis}}</div>
     <br> <div class="dotted" style="text-transform:uppercase;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {{$premis->alamat}}</div> 
-    <br> <div class="dotted"></div>
+    <br> <div class="dotted" style="text-transform:uppercase;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {{$premis->poskod}}, {{$premis->negeri}}</div>
     @endforeach
 
-   <br> <p> SILA AMBIL PERHATIAN bahawa Ketua Pengarah Perkhidmatan Bomba +, setelah berpuas hati tentang adanya di <u>{{$premis->nama_premis}}, {{$premis->alamat}}</u></p>
+   <br> <p> SILA AMBIL PERHATIAN bahawa Ketua Pengarah Perkhidmatan Bomba +, setelah berpuas hati tentang adanya di <u>{{$premis->nama_premis}}, {{$premis->alamat}}, {{$premis->poskod}}, {{$premis->negeri}} </u></p>
 
     <p>suatu bahaya Kebakaran, iaitu <u>{{$notis->jenis_ppk}} yang {{$notis->kesalahan}} di {{$notis->aras}} bahagian {{$notis->lokasi}} premis, di bawah {{$notis->seksyen}}</u></p>
 

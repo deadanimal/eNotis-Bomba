@@ -15,7 +15,9 @@ class PremisSeeder extends Seeder
     {
         Premis::create ([
         'nama_premis'=>'Akal Budi Resource',
-        'alamat'=>'No 21, Jalan Bahagia 5, Selangor',
+        'alamat'=>'No 21, Jalan Bahagia 5',
+        'poskod'=>'53300',
+        'negeri'=>'Kuala Lumpur',
         'jenis_perniagaan'=>'2',
         'pemilik'=>'En Rahman',
         'no_tel'=>'012-2266039',
@@ -24,7 +26,9 @@ class PremisSeeder extends Seeder
 
         Premis::create ([
             'nama_premis'=>'HBS Sdn Bhd',
-            'alamat'=>'No 5, Jalan Tanjung, Perak',
+            'alamat'=>'Ibu Pejabat Aim, Menara Amanah Ikhtiar, No 3,Jln Cempaka',
+            'poskod'=>'50676',
+            'negeri'=>'Pulau Pinang',
             'jenis_perniagaan'=>'4',
             'pemilik'=>'En Lee',
             'no_tel'=>'012902111',
